@@ -7,7 +7,9 @@ export type WidgetName =
   | "mrr-movement"
   | "decision-tree"
   | "profile-explorer"
-  | "monthly-vs-annual";
+  | "monthly-vs-annual"
+  | "repricing-simulator"
+  | "ppp-calculator";
 
 export type Block =
   | { type: "lead"; text: string }

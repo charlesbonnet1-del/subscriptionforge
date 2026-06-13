@@ -402,10 +402,144 @@ const module3: Quiz = {
   ],
 };
 
+const module4: Quiz = {
+  moduleSlug: "pricing",
+  title: "Quiz — Pricing",
+  passMark: 14,
+  questions: [
+    {
+      id: 1,
+      prompt: "Pourquoi le cost-plus est-il un mauvais point de départ en abonnement ?",
+      options: [
+        "Parce qu'il sous-estime toujours la marge",
+        "Parce que le coût marginal est quasi nul et que le client valorise la valeur reçue, pas vos coûts",
+        "Parce qu'il est illégal en B2B",
+        "Parce qu'il ignore la TVA",
+      ],
+      correct: 1,
+      explain:
+        "Le coût de revient fixe le plancher de survie, jamais le prix. Le client compare le prix à la valeur reçue et aux alternatives — deux grandeurs sans rapport avec vos coûts.",
+    },
+    {
+      id: 2,
+      prompt: "En value-based pricing B2B, quelle fraction de la valeur créée capture-t-on classiquement ?",
+      options: ["50-70 %", "10-30 %", "90-100 %", "1-5 %"],
+      correct: 1,
+      explain:
+        "On capture 10 à 30 % de la valeur créée ; le reste est le surplus qui motive l'achat. Le prix est une propriété du segment, pas du produit.",
+    },
+    {
+      id: 3,
+      prompt: "Pourquoi un prix trop bas est-il pire qu'un prix trop haut ?",
+      options: [
+        "Parce qu'il est plus difficile à calculer",
+        "Parce qu'il ne proteste jamais : la conversion semble bonne pendant que les dégâts sont silencieux",
+        "Parce qu'il augmente le coût du support",
+        "Parce qu'il viole le contrat moral",
+      ],
+      correct: 1,
+      explain:
+        "Un prix trop haut se corrige en semaines (la conversion chute). Un prix trop bas ampute LTV/payback, recrute des Chasseurs de valeur et finit en sous-délivrance — sans signal.",
+    },
+    {
+      id: 4,
+      prompt: "Que produit la méthode Van Westendorp ?",
+      options: [
+        "Le prix optimal exact",
+        "Une fourchette de prix acceptables, à lire par segment séparé",
+        "Le churn prévisionnel",
+        "Le CAC par canal",
+      ],
+      correct: 1,
+      explain:
+        "Quatre questions (trop cher / cher / bonne affaire / trop bon marché) dessinent une zone, pas un chiffre. Agréger les segments ne désigne le bon prix pour personne.",
+    },
+    {
+      id: 5,
+      prompt: "Sur une page pricing, quelle est la décision à plus fort impact ?",
+      options: [
+        "La couleur du bouton",
+        "Afficher l'annuel par défaut (en équivalent mensuel)",
+        "Le nombre de témoignages",
+        "La taille de la FAQ",
+      ],
+      correct: 1,
+      explain:
+        "La majorité ne touche pas au toggle, et chaque annuel vaut 2-3× un mensuel. C'est la décision à plus fort impact de la page.",
+    },
+    {
+      id: 6,
+      prompt: "Quelle est la règle d'or du grandfathering ?",
+      options: [
+        "Toujours sans limite de durée",
+        "Le borner dans le temps, jamais indéfiniment",
+        "Ne jamais l'utiliser",
+        "Le réserver aux nouveaux clients",
+      ],
+      correct: 1,
+      explain:
+        "Grandfatherer oui, sans limite de durée jamais : « garanti tant que l'abonnement reste actif » transforme le tarif en switching cost loyal, sans accumuler des strates de tarifs à l'infini.",
+    },
+    {
+      id: 7,
+      prompt: "Un repricing de +20 % qui provoque 5 % de churn additionnel est :",
+      options: [
+        "Toujours perdant",
+        "Très largement gagnant — l'arithmétique doit être posée avant",
+        "Neutre",
+        "Impossible à évaluer",
+      ],
+      correct: 1,
+      explain:
+        "Le seuil d'équilibre est à hike/(1+hike) ≈ 16,7 % de churn pour +20 %. À 5 %, on est largement gagnant. Chiffrer le churn acceptable avant évite la panique et le rétropédalage.",
+    },
+    {
+      id: 8,
+      prompt: "Quelle erreur centrale explique l'échec du repricing Netflix 2011 ?",
+      options: [
+        "Une hausse trop faible",
+        "Une hausse massive d'un coup, sans amortisseur, justifiée par la stratégie et non la valeur reçue",
+        "Un préavis trop long",
+        "Trop de protection des fidèles",
+      ],
+      correct: 1,
+      explain:
+        "+60 % en une marche, le client recevant moins (deux comptes, deux factures) pour plus cher. On peut faire payer beaucoup plus, jamais beaucoup plus d'un coup — sauf à changer de produit en même temps.",
+    },
+    {
+      id: 9,
+      prompt: "La « règle du 1/5 » en pricing international signifie :",
+      options: [
+        "Réduire tous les prix de 20 %",
+        "Un produit à 10 $ en Occident devrait coûter ~2 $ en Inde (parité de pouvoir d'achat)",
+        "Vendre dans 5 devises maximum",
+        "Capturer 1/5 de la valeur créée",
+      ],
+      correct: 1,
+      explain:
+        "Ajuster au pouvoir d'achat, pas au taux de change. Sur un produit à coût marginal quasi nul, tout abonné gagné à 2 $ est du revenu presque pur qui n'existerait pas à 10 $.",
+    },
+    {
+      id: 10,
+      prompt: "Comment juger correctement le vainqueur d'un test de prix ?",
+      options: [
+        "Le prix qui convertit le mieux",
+        "Conversion + revenu par visiteur + rétention de cohorte à 90 jours",
+        "Le prix le plus élevé",
+        "Le prix avec le plus de clics",
+      ],
+      correct: 1,
+      explain:
+        "Le prix bas convertit presque toujours mieux mais peut perdre le business en recrutant des Chasseurs de valeur. La conversion ment, la LTV tranche.",
+    },
+  ],
+};
+
 export const QUIZZES: Record<string, Quiz> = {
   [module1.moduleSlug]: module1,
   [module2.moduleSlug]: module2,
   [module3.moduleSlug]: module3,
+  [module4.moduleSlug]: module4,
 };
 
 export function getQuiz(slug: string): Quiz | undefined {

@@ -2,12 +2,14 @@ import type { CourseContent, Lesson } from "@/lib/content-types";
 import { moduleOne } from "./module-1";
 import { moduleTwo } from "./module-2";
 import { moduleThree } from "./module-3";
+import { moduleFour } from "./module-4";
 
 // Registre des contenus de cours. Un module y figure dès que son contenu est forgé.
 export const COURSES: Record<string, CourseContent> = {
   [moduleOne.moduleSlug]: moduleOne,
   [moduleTwo.moduleSlug]: moduleTwo,
   [moduleThree.moduleSlug]: moduleThree,
+  [moduleFour.moduleSlug]: moduleFour,
 };
 
 export function getCourse(slug: string): CourseContent | undefined {

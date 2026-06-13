@@ -7,6 +7,8 @@ import MrrMovement from "@/components/games/MrrMovement";
 import DecisionTree from "@/components/games/DecisionTree";
 import ProfileExplorer from "@/components/games/ProfileExplorer";
 import MonthlyVsAnnual from "@/components/games/MonthlyVsAnnual";
+import RepricingSimulator from "@/components/games/RepricingSimulator";
+import PppCalculator from "@/components/games/PppCalculator";
 
 function Widget({ name }: { name: string }) {
   switch (name) {
@@ -22,6 +24,10 @@ function Widget({ name }: { name: string }) {
       return <ProfileExplorer />;
     case "monthly-vs-annual":
       return <MonthlyVsAnnual />;
+    case "repricing-simulator":
+      return <RepricingSimulator />;
+    case "ppp-calculator":
+      return <PppCalculator />;
     default:
       return null;
   }

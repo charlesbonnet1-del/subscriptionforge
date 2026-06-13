@@ -15,11 +15,15 @@ import FreemiumSlider from "./FreemiumSlider";
 import TrialSequence from "./TrialSequence";
 import MonthlyVsAnnual from "./MonthlyVsAnnual";
 import SeasonalCalendar from "./SeasonalCalendar";
+import RepricingSimulator from "./RepricingSimulator";
+import PppCalculator from "./PppCalculator";
+import { PricingPageAudit, RepricingJudgment, BenchmarkMatch } from "./PricingGames";
 
 const REGISTRY: Record<string, React.ComponentType[]> = {
   "economie-de-l-abonnement": [VocabMatch, ArchetypeClassifier, FindTheError, LtvCalculator, DecisionTree],
   "psychologie-de-l-abonne": [ProfileClassifier, BiasHunt, ABCopy, GuiltDetector, LifeMomentMatch],
   "design-du-modele": [TierArchitect, FreemiumSlider, TrialSequence, MonthlyVsAnnual, SeasonalCalendar],
+  "pricing": [BenchmarkMatch, PricingPageAudit, RepricingJudgment, RepricingSimulator, PppCalculator],
 };
 
 export function hasModuleGames(slug: string): boolean {
