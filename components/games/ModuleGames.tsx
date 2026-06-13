@@ -34,6 +34,7 @@ import { MediaPaywallMatch, ContentFracture, CreatorTierMatch, CreatorScalabilit
 import { PlgEligibility, UsageBasedViability, SupportVsCs, ChampionVsBuyer, RenewalTimeline } from "./SaasGames";
 import BoxEconomics from "./BoxEconomics";
 import { AppStoreStrategy, MobilePaywallAudit, BoxRetentionLever, BoxDesign } from "./MobileBoxGames";
+import { BillingChoice, DarkPatternSpotter, LoyalVsDark, DarkPatternHarm } from "./StackGames";
 
 const REGISTRY: Record<string, React.ComponentType[]> = {
   "economie-de-l-abonnement": [VocabMatch, ArchetypeClassifier, FindTheError, LtvCalculator, DecisionTree],
@@ -49,6 +50,7 @@ const REGISTRY: Record<string, React.ComponentType[]> = {
   "media-newsletters-creators": [NewsletterCalculator, MediaPaywallMatch, ContentFracture, CreatorTierMatch, CreatorScalability],
   "saas-b2b": [PlgEligibility, UsageBasedViability, SupportVsCs, ChampionVsBuyer, RenewalTimeline],
   "mobile-et-abonnements-physiques": [AppStoreStrategy, MobilePaywallAudit, BoxEconomics, BoxDesign, BoxRetentionLever],
+  "stack-technique-et-outils": [BillingChoice, DarkPatternSpotter, LoyalVsDark, DarkPatternHarm],
 };
 
 export function hasModuleGames(slug: string): boolean {

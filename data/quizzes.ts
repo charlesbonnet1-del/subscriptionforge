@@ -1712,6 +1712,139 @@ const module12: Quiz = {
   ],
 };
 
+const module13: Quiz = {
+  moduleSlug: "stack-technique-et-outils",
+  title: "Quiz — Stack technique & outils",
+  passMark: 14,
+  questions: [
+    {
+      id: 1,
+      prompt: "Pourquoi le choix du billing est-il la décision d'infrastructure n°1 ?",
+      options: [
+        "Parce que c'est le plus cher",
+        "Parce que tout s'y branche et qu'en changer plus tard est un projet lourd (lock-in d'intégration subi)",
+        "Parce qu'il est obligatoire légalement",
+        "Parce qu'il gère le marketing",
+      ],
+      correct: 1,
+      explain:
+        "Le billing crée les abonnements, prélève, gère échecs et upgrades : c'est la brique fondatrice sur laquelle tout le reste se branche.",
+    },
+    {
+      id: 2,
+      prompt: "Avec Stripe Billing, qui est le marchand légal ?",
+      options: [
+        "Stripe",
+        "Vous : la TVA internationale et la conformité restent votre affaire",
+        "La banque de l'abonné",
+        "Le client",
+      ],
+      correct: 1,
+      explain:
+        "Stripe vous outille, mais vous êtes le marchand. C'est la différence clé avec un Merchant of Record comme Paddle.",
+    },
+    {
+      id: 3,
+      prompt: "Pour un logiciel vendu mondialement par une petite équipe, quel billing privilégier ?",
+      options: [
+        "Stripe Billing",
+        "Paddle (Merchant of Record) : TVA et conformité mondiales externalisées",
+        "Chargebee",
+        "Un tableur",
+      ],
+      correct: 1,
+      explain:
+        "On échange des points de marge contre l'absence totale d'administration fiscale internationale (TVA de dizaines de juridictions, chargebacks).",
+    },
+    {
+      id: 4,
+      prompt: "Quels sont les trois critères d'arbitrage du billing au-delà des marques ?",
+      options: [
+        "Le prix, la couleur, la popularité",
+        "Qui est le marchand, le coût total à votre échelle, les capacités de rétention natives",
+        "Le pays, la langue, la devise",
+        "La rapidité, le design, le support",
+      ],
+      correct: 1,
+      explain:
+        "Le moins cher à 10 k€ de MRR n'est pas le moins cher à 100 k€. Et un billing sans recovery sérieux (dunning) coûte plus cher que sa commission.",
+    },
+    {
+      id: 5,
+      prompt: "Quand passer du tableur à un outil d'analytics d'abonnement dédié ?",
+      options: [
+        "Dès le premier mois",
+        "Quand la maintenance du tableur dépasse une heure par semaine",
+        "Jamais",
+        "À 100 abonnés",
+      ],
+      correct: 1,
+      explain:
+        "Le dashboard du billing suffit aux premiers mois. Les mois passés dans le tableur auront appris les définitions mieux qu'aucun dashboard clé en main.",
+    },
+    {
+      id: 6,
+      prompt: "Qu'est-ce qui fait le pilotage complet ?",
+      options: [
+        "L'analytics d'abonnement seule",
+        "Le croisement de l'analytics d'abonnement (revenu) et de l'analytics produit (usage) — le health score",
+        "L'analytics produit seule",
+        "Le dashboard du billing",
+      ],
+      correct: 1,
+      explain:
+        "Le revenu dit ce qui se passe, l'usage dit pourquoi et ce qui va se passer. Le Customer Health Score est leur croisement.",
+    },
+    {
+      id: 7,
+      prompt: "Comment s'appelle le dark pattern « facile d'entrer, difficile de sortir » ?",
+      options: ["Le confirmshaming", "Le roach motel", "Le prix masqué", "L'urgence perpétuelle"],
+      correct: 1,
+      explain:
+        "Souscription en un clic, résiliation par téléphone, menus introuvables : le plus répandu et le plus légiféré (click-to-cancel).",
+    },
+    {
+      id: 8,
+      prompt: "Comment un dark pattern peut-il « débrancher l'encaissement » ?",
+      options: [
+        "En augmentant les impôts",
+        "Via les chargebacks : au-delà des seuils de litiges, perte du compte marchand",
+        "En ralentissant le site",
+        "En supprimant les emails",
+      ],
+      correct: 1,
+      explain:
+        "L'abonné qui ne peut pas résilier appelle sa banque. Le chargeback coûte le montant + des frais + un point de ratio que les processeurs surveillent.",
+    },
+    {
+      id: 9,
+      prompt: "Pourquoi la rétention par obstruction stérilise-t-elle le win-back ?",
+      options: [
+        "Parce qu'elle coûte cher",
+        "Parce qu'on ne reconquiert pas quelqu'un qui s'est senti piégé",
+        "Parce qu'elle est illégale",
+        "Parce qu'elle augmente le NPS",
+      ],
+      correct: 1,
+      explain:
+        "C'est de la dette de churn à intérêts composés : elle se solde en vagues, avec ressentiment — et le partant piégé est perdu pour le win-back.",
+    },
+    {
+      id: 10,
+      prompt: "Quelle est la règle de clôture du module ?",
+      options: [
+        "Retenir l'abonné par tous les moyens",
+        "Tout ce qui retient un abonné contre sa volonté est un emprunt sur le churn futur, au taux d'usure",
+        "Le billing loyal est un handicap concurrentiel",
+        "La transparence réduit la conversion",
+      ],
+      correct: 1,
+      explain:
+        "La save flow intercepte, la transparence convertit, la sortie digne est le premier acte du retour. Le billing loyal est l'infrastructure de la confiance.",
+    },
+  ],
+};
+
 export const QUIZZES: Record<string, Quiz> = {
   [module1.moduleSlug]: module1,
   [module2.moduleSlug]: module2,
@@ -1726,6 +1859,7 @@ export const QUIZZES: Record<string, Quiz> = {
   [module10.moduleSlug]: module10,
   [module11.moduleSlug]: module11,
   [module12.moduleSlug]: module12,
+  [module13.moduleSlug]: module13,
 };
 
 export function getQuiz(slug: string): Quiz | undefined {
