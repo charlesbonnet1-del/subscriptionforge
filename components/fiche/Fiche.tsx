@@ -9,6 +9,8 @@ import ProfileExplorer from "@/components/games/ProfileExplorer";
 import MonthlyVsAnnual from "@/components/games/MonthlyVsAnnual";
 import RepricingSimulator from "@/components/games/RepricingSimulator";
 import PppCalculator from "@/components/games/PppCalculator";
+import FunnelCalculator from "@/components/games/FunnelCalculator";
+import ViralKCalculator from "@/components/games/ViralKCalculator";
 
 function Widget({ name }: { name: string }) {
   switch (name) {
@@ -28,6 +30,10 @@ function Widget({ name }: { name: string }) {
       return <RepricingSimulator />;
     case "ppp-calculator":
       return <PppCalculator />;
+    case "funnel-calculator":
+      return <FunnelCalculator />;
+    case "viral-k-calculator":
+      return <ViralKCalculator />;
     default:
       return null;
   }

@@ -18,12 +18,16 @@ import SeasonalCalendar from "./SeasonalCalendar";
 import RepricingSimulator from "./RepricingSimulator";
 import PppCalculator from "./PppCalculator";
 import { PricingPageAudit, RepricingJudgment, BenchmarkMatch } from "./PricingGames";
+import FunnelCalculator from "./FunnelCalculator";
+import ViralKCalculator from "./ViralKCalculator";
+import { ChannelLtvRank, AhaDiagnose, PaywallMatch } from "./FunnelGames";
 
 const REGISTRY: Record<string, React.ComponentType[]> = {
   "economie-de-l-abonnement": [VocabMatch, ArchetypeClassifier, FindTheError, LtvCalculator, DecisionTree],
   "psychologie-de-l-abonne": [ProfileClassifier, BiasHunt, ABCopy, GuiltDetector, LifeMomentMatch],
   "design-du-modele": [TierArchitect, FreemiumSlider, TrialSequence, MonthlyVsAnnual, SeasonalCalendar],
   "pricing": [BenchmarkMatch, PricingPageAudit, RepricingJudgment, RepricingSimulator, PppCalculator],
+  "funnel-d-abonnement": [FunnelCalculator, ChannelLtvRank, ViralKCalculator, AhaDiagnose, PaywallMatch],
 };
 
 export function hasModuleGames(slug: string): boolean {

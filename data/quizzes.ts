@@ -535,11 +535,140 @@ const module4: Quiz = {
   ],
 };
 
+const module5: Quiz = {
+  moduleSlug: "funnel-d-abonnement",
+  title: "Quiz — Le funnel d'abonnement",
+  passMark: 14,
+  questions: [
+    {
+      id: 1,
+      prompt: "Quelle étape du funnel est « proprement subscription » (absente du e-commerce) ?",
+      options: ["La Découverte", "L'Activation (aha moment)", "La Transaction", "L'Intérêt"],
+      correct: 1,
+      explain:
+        "L'Activation sépare les inscrits durables de ceux qui s'évaporent. La transaction y est la ligne de départ, pas d'arrivée.",
+    },
+    {
+      id: 2,
+      prompt: "Pourquoi piloter l'acquisition au seul CPA est-il insuffisant ?",
+      options: [
+        "Le CPA est trop difficile à calculer",
+        "Il ignore la LTV et le payback : un canal à CPA bas qui recrute des churn-90-jours détruit de la valeur",
+        "Le CPA est illégal en B2C",
+        "Le CPA varie trop selon les saisons",
+      ],
+      correct: 1,
+      explain:
+        "Le triplet complet par canal : CAC complet + LTV de la cohorte + payback. Un CPA de 120 € qui recrute des annuels fidèles bat un CPA de 30 € qui churne vite.",
+    },
+    {
+      id: 3,
+      prompt: "Quel canal produit typiquement la LTV la plus élevée ?",
+      options: ["Le social paid", "Le referral", "Le coup de projecteur d'un influenceur généraliste", "Le display"],
+      correct: 1,
+      explain:
+        "Le filleul arrive pré-convaincu, pré-qualifié et socialement engagé : il churne 25-40 % de moins. Le SEO/contenu suit.",
+    },
+    {
+      id: 4,
+      prompt: "Qu'est-ce que le promise-delivery gap ?",
+      options: [
+        "L'écart entre le prix affiché et le prix payé",
+        "L'écart entre ce que la campagne promet et ce que le produit délivre, qui fabrique du churn précoce",
+        "Le délai entre l'inscription et le paiement",
+        "La différence entre MRR et ARR",
+      ],
+      correct: 1,
+      explain:
+        "Sur-promettre crée des abonnés structurellement déçus : leur churn précoce est une dette contractée à l'acquisition. Calibrer la promesse sur l'expérience du premier mois.",
+    },
+    {
+      id: 5,
+      prompt: "Quand faut-il déclencher une invitation de parrainage ?",
+      options: [
+        "À J+1, dès l'inscription",
+        "Après l'aha moment, aux pics d'enthousiasme (milestone, NPS élevé)",
+        "Uniquement à l'expiration de l'abonnement",
+        "Au moment de la facturation",
+      ],
+      correct: 1,
+      explain:
+        "Demander à J+1 à quelqu'un qui n'a rien à recommander est l'erreur classique. Le promoteur qui vient de mettre 9/10 au NPS est la cible parfaite.",
+    },
+    {
+      id: 6,
+      prompt: "Quelle incentive de referral est généralement la meilleure ?",
+      options: [
+        "Du cash unilatéral pour le parrain",
+        "Une récompense double, en nature produit (du temps/des capacités en plus)",
+        "Une remise permanente sur le prix",
+        "Un cadeau physique de marque",
+      ],
+      correct: 1,
+      explain:
+        "En nature : ne coûte que le marginal, renforce l'usage, ne recrute pas de chasseurs de prime. Double : lève la gêne sociale (« je fais un cadeau »). Cas Dropbox : 500 Mo des deux côtés.",
+    },
+    {
+      id: 7,
+      prompt: "Pourquoi « 90 % de complétion d'onboarding » peut-il coexister avec « 100 % de churn » ?",
+      options: [
+        "Parce que l'onboarding est trop court",
+        "Parce que la complétion mesure l'obéissance au parcours, pas la valeur réellement vécue (l'activation)",
+        "Parce que les utilisateurs mentent aux enquêtes",
+        "Parce que le paywall arrive trop tard",
+      ],
+      correct: 1,
+      explain:
+        "La bonne étoile polaire est le Time-to-First-Value, pas le taux de complétion. S'activer dans les 3 premiers jours double quasiment la rétention.",
+    },
+    {
+      id: 8,
+      prompt: "Quel est l'aha moment de Slack ?",
+      options: [
+        "Envoyer son premier message",
+        "Recevoir une réponse (la conversation prouve la promesse)",
+        "Créer un canal",
+        "Inviter dix personnes",
+      ],
+      correct: 1,
+      explain:
+        "En recevoir un, pas en envoyer un : c'est la conversation qui matérialise la promesse, d'où la version chiffrée des « 2 000 messages d'équipe ».",
+    },
+    {
+      id: 9,
+      prompt: "Où placer son paywall ?",
+      options: [
+        "Avant toute utilisation, pour maximiser le revenu",
+        "Juste après l'aha moment, quand le désir est au maximum",
+        "À une date fixe après l'inscription",
+        "Seulement après 30 jours d'usage",
+      ],
+      correct: 1,
+      explain:
+        "Avant la valeur, on demande de payer une promesse ; juste après, une expérience — la conversion change d'ordre de grandeur. Le paywall est un moment, pas un mur.",
+    },
+    {
+      id: 10,
+      prompt: "Quel est le principe du Dynamic Meter du New York Times ?",
+      options: [
+        "Un seuil fixe de 20 articles pour tous",
+        "Le seuil optimal est une fonction de l'engagement du lecteur, pas un chiffre fixe",
+        "Un hard paywall total",
+        "Aucun article gratuit",
+      ],
+      correct: 1,
+      explain:
+        "De l'espace pour le lecteur occasionnel (pas prêt), un seuil rapproché pour l'engagé (prêt). Le paywall optimal est une fonction de la propension à payer, que l'engagement prédit.",
+    },
+  ],
+};
+
 export const QUIZZES: Record<string, Quiz> = {
   [module1.moduleSlug]: module1,
   [module2.moduleSlug]: module2,
   [module3.moduleSlug]: module3,
   [module4.moduleSlug]: module4,
+  [module5.moduleSlug]: module5,
 };
 
 export function getQuiz(slug: string): Quiz | undefined {

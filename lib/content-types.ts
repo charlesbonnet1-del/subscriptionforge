@@ -9,7 +9,9 @@ export type WidgetName =
   | "profile-explorer"
   | "monthly-vs-annual"
   | "repricing-simulator"
-  | "ppp-calculator";
+  | "ppp-calculator"
+  | "funnel-calculator"
+  | "viral-k-calculator";
 
 export type Block =
   | { type: "lead"; text: string }
