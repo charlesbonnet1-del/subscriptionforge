@@ -11,6 +11,7 @@ import RepricingSimulator from "@/components/games/RepricingSimulator";
 import PppCalculator from "@/components/games/PppCalculator";
 import FunnelCalculator from "@/components/games/FunnelCalculator";
 import ViralKCalculator from "@/components/games/ViralKCalculator";
+import CohortDecay from "@/components/games/CohortDecay";
 
 function Widget({ name }: { name: string }) {
   switch (name) {
@@ -34,6 +35,8 @@ function Widget({ name }: { name: string }) {
       return <FunnelCalculator />;
     case "viral-k-calculator":
       return <ViralKCalculator />;
+    case "cohort-decay":
+      return <CohortDecay />;
     default:
       return null;
   }

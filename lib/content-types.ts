@@ -11,7 +11,8 @@ export type WidgetName =
   | "repricing-simulator"
   | "ppp-calculator"
   | "funnel-calculator"
-  | "viral-k-calculator";
+  | "viral-k-calculator"
+  | "cohort-decay";
 
 export type Block =
   | { type: "lead"; text: string }

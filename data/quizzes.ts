@@ -663,12 +663,136 @@ const module5: Quiz = {
   ],
 };
 
+const module6: Quiz = {
+  moduleSlug: "anatomie-du-churn",
+  title: "Quiz — Anatomie du churn",
+  passMark: 14,
+  questions: [
+    {
+      id: 1,
+      prompt: "Quelle part du churn total est typiquement involontaire (échecs de paiement) ?",
+      options: ["Moins de 5 %", "20-40 %", "50-60 %", "Plus de 80 %"],
+      correct: 1,
+      explain:
+        "20-40 % en règle générale, et davantage dans les box physiques. Dont 60-70 % de soft declines récupérables — le levier au meilleur ROI (dunning).",
+    },
+    {
+      id: 2,
+      prompt: "Un zombie subscriber, comptablement et opérationnellement, c'est :",
+      options: [
+        "Du churn comptable mais pas opérationnel",
+        "Pas du churn comptable, mais un churn à terme opérationnel",
+        "Ni l'un ni l'autre",
+        "Un churn involontaire",
+      ],
+      correct: 1,
+      explain:
+        "Il paie encore (le MRR le compte comme parfait) mais la relation est morte : un churn à terme dont seule la date est inconnue. À garder visible dans « inactifs payants ».",
+    },
+    {
+      id: 3,
+      prompt: "Un churn précoce (< 90 jours) signale le plus souvent :",
+      options: [
+        "Un problème de produit mature",
+        "Un problème d'entrée : promise-delivery gap, onboarding raté, mauvaise acquisition",
+        "Un problème de pricing",
+        "Un problème de dunning",
+      ],
+      correct: 1,
+      explain:
+        "Le churn précoce se traite en amont, dans le funnel. Le 1ᵉʳ mois concentre 12-30 % de churn selon les verticales.",
+    },
+    {
+      id: 4,
+      prompt: "Le logo churn est supérieur au revenue churn. Qu'est-ce que cela signifie ?",
+      options: [
+        "Les gros comptes partent (alerte majeure)",
+        "Ce sont les petits comptes qui partent (souvent acceptable)",
+        "Le churn est involontaire",
+        "Il y a une erreur de calcul",
+      ],
+      correct: 1,
+      explain:
+        "Logo > revenue = les petits paniers partent. L'inverse (revenue > logo) signifie que les gros comptes partent : une alerte stratégique majeure.",
+    },
+    {
+      id: 5,
+      prompt: "Pourquoi la contraction est-elle un « prédateur silencieux » ?",
+      options: [
+        "Parce qu'elle est involontaire",
+        "Parce qu'elle ronge le MRR sans événement de résiliation et précède la majorité des départs B2B",
+        "Parce qu'elle touche seulement les zombies",
+        "Parce qu'elle est toujours saisonnière",
+      ],
+      correct: 1,
+      explain:
+        "Les clients restent mais paient moins (downgrades, sièges réduits) : aucun événement à intercepter, et c'est le principal signal avancé du churn B2B. À suivre séparément.",
+    },
+    {
+      id: 6,
+      prompt: "Passer d'un churn mensuel de 7 % à 2 % multiplie la LTV par environ :",
+      options: ["1,5", "3,5", "10", "Aucun effet"],
+      correct: 1,
+      explain:
+        "Durée de vie de ~14 à ~50 mois. LTV = ARPU/churn donc ×3,5. La croissance change de nature : 200 nouveaux/mois suffisent au lieu de 700 pour une base de 10 000.",
+    },
+    {
+      id: 7,
+      prompt: "Sur une courbe de rétention, qu'indique l'absence de plateau (descente vers zéro) ?",
+      options: [
+        "Un excellent onboarding",
+        "L'absence de forever promise : aucune optimisation d'acquisition ne sauvera le modèle",
+        "Un churn involontaire élevé",
+        "Une smile curve en formation",
+      ],
+      correct: 1,
+      explain:
+        "Le plateau est le test de viabilité ultime : il est le noyau d'abonnés durables. Sans lui, le modèle n'a pas de valeur continue (retour au Module 3.1).",
+    },
+    {
+      id: 8,
+      prompt: "Quel découpage de cohorte est le plus puissant pour chiffrer la valeur de l'onboarding ?",
+      options: [
+        "Par canal d'acquisition",
+        "Par comportement d'activation (aha moment atteint vs non)",
+        "Par plan tarifaire",
+        "Par zone géographique",
+      ],
+      correct: 1,
+      explain:
+        "L'écart entre la cohorte « a atteint l'aha moment en 3 jours » et « ne l'a pas atteint » transforme « il faut améliorer l'activation » en business case budgété.",
+    },
+    {
+      id: 9,
+      prompt: "Lequel est un leading indicator (alerte) plutôt qu'un lagging (constat) ?",
+      options: [
+        "Le taux de résiliation du mois",
+        "La fréquence d'usage en baisse sur 30/60/90 jours",
+        "Le NRR du trimestre",
+        "Les verbatims de la survey de sortie",
+      ],
+      correct: 1,
+      explain:
+        "L'usage en baisse est le signal roi : il précède le churn de semaines. Le churn, le NRR et la survey de sortie sont des constats — déjà arrivés.",
+    },
+    {
+      id: 10,
+      prompt: "Dans un Customer Health Score, quelle composante pèse le plus (≈40 %) ?",
+      options: ["Billing", "L'Activité (fréquence, récence, tendance d'usage)", "Le support", "L'adoption des fonctionnalités"],
+      correct: 1,
+      explain:
+        "L'usage est le meilleur prédicteur unique du churn. Le score ne vaut que par les actions Rouge/Orange/Vert qu'il déclenche.",
+    },
+  ],
+};
+
 export const QUIZZES: Record<string, Quiz> = {
   [module1.moduleSlug]: module1,
   [module2.moduleSlug]: module2,
   [module3.moduleSlug]: module3,
   [module4.moduleSlug]: module4,
   [module5.moduleSlug]: module5,
+  [module6.moduleSlug]: module6,
 };
 
 export function getQuiz(slug: string): Quiz | undefined {

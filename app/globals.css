@@ -1018,3 +1018,6 @@ a {
 .funnel-bar { height: 100%; background: linear-gradient(90deg, var(--fire-core), var(--fire-glow)); border-radius: 4px 0 0 4px; min-width: 2px; transition: width 0.2s ease; }
 .funnel-bar.bottleneck { background: linear-gradient(90deg, var(--danger), #e2683c); }
 .funnel-count { position: absolute; right: 10px; font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
+
+/* ---------- Cohort decay SVG ---------- */
+.cohort-svg { width: 100%; height: auto; display: block; background: var(--bg-soft); border-radius: var(--radius); padding: 8px; }
