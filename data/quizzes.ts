@@ -1446,6 +1446,144 @@ const module10: Quiz = {
   ],
 };
 
+const module11: Quiz = {
+  moduleSlug: "saas-b2b",
+  title: "Quiz — Abonnement SaaS B2B",
+  passMark: 14,
+  questions: [
+    {
+      id: 1,
+      prompt: "Qu'est-ce qui définit le Product-Led Growth ?",
+      options: [
+        "La vente précède l'usage",
+        "L'usage précède la vente : le produit s'adopte en self-service et se diffuse",
+        "L'absence totale de commerciaux",
+        "Un pricing uniquement à l'usage",
+      ],
+      correct: 1,
+      explain:
+        "Le PLG renverse le go-to-market : l'individu adopte, l'équipe suit, l'entreprise enfin. La monétisation suit l'adoption.",
+    },
+    {
+      id: 2,
+      prompt: "Qu'est-ce qu'un viral loop intrinsèque (vs un programme de parrainage) ?",
+      options: [
+        "Une remise pour avoir invité un ami",
+        "L'usage normal du produit qui expose des non-utilisateurs (document partagé, lien Calendly)",
+        "Une publicité virale",
+        "Un concours sur les réseaux sociaux",
+      ],
+      correct: 1,
+      explain:
+        "Chaque acte d'usage est une démonstration à un prospect — la boucle est intrinsèque au produit, pas incitée par une récompense.",
+    },
+    {
+      id: 3,
+      prompt: "« PLG ne signifie pas pas de sales » — pourquoi ?",
+      options: [
+        "Parce que le PLG est plus cher",
+        "La vente intervient plus tard et mieux qualifiée, sur les signaux produit (product-led sales)",
+        "Parce que le self-service ne convertit jamais",
+        "Parce que les sales remplacent le produit",
+      ],
+      correct: 1,
+      explain:
+        "Le commercial PLG récolte des comptes que le produit a mûris (utilisateurs actifs, fonctionnalités enterprise effleurées) — il ne prospecte pas à froid.",
+    },
+    {
+      id: 4,
+      prompt: "Quelle est la force principale de l'usage-based pricing ?",
+      options: [
+        "Sa simplicité de facturation",
+        "L'alignement : l'expansion est câblée dans le compteur, sans renégociation",
+        "Sa prévisibilité pour le client",
+        "L'absence de churn",
+      ],
+      correct: 1,
+      explain:
+        "Le client qui réussit consomme plus et paie plus, sans décision. C'est le moteur des NRR d'exception (130-160 %).",
+    },
+    {
+      id: 5,
+      prompt: "Pourquoi le bill shock est-il « asymétrique » ?",
+      options: [
+        "Il touche surtout les petits clients",
+        "Dix factures conformes ne construisent pas la confiance qu'une seule facture choc détruit",
+        "Il varie selon les saisons",
+        "Il ne concerne que l'IA",
+      ],
+      correct: 1,
+      explain:
+        "D'où l'arsenal non négociable : estimateurs, alertes de seuil, caps optionnels, et factures lisibles qui s'expliquent seules.",
+    },
+    {
+      id: 6,
+      prompt: "Quelle est la règle de design de l'hybride socle + usage ?",
+      options: [
+        "Le socle doit être minimal pour pousser le dépassement",
+        "Le socle couvre l'usage normal du segment ; la pente du prix à l'usage décroît avec le volume",
+        "Le prix unitaire augmente avec le volume",
+        "Pas de socle, uniquement de l'usage",
+      ],
+      correct: 1,
+      explain:
+        "Le client moyen ne doit pas vivre dans le dépassement (sinon plan mal calibré, ressentiment). Le coût unitaire décroissant est le contrat implicite de l'expansion.",
+    },
+    {
+      id: 7,
+      prompt: "Quelle est la distinction fondatrice entre Support et Customer Success ?",
+      options: [
+        "Le CS est gratuit, le support payant",
+        "Le support répond aux problèmes (réactif) ; le CS poursuit des résultats (proactif)",
+        "Le CS est B2C, le support B2B",
+        "Aucune, ce sont des synonymes",
+      ],
+      correct: 1,
+      explain:
+        "Confondre les deux produit un CS qui éteint des feux au lieu de construire de la valeur. Le CS se déclenche sur les signaux, pas sur le client.",
+    },
+    {
+      id: 8,
+      prompt: "Quelle est la règle quantitative du multi-threading ?",
+      options: [
+        "Une relation par compte suffit",
+        "Trois relations actives minimum par compte significatif",
+        "Dix contacts par compte",
+        "Uniquement le champion",
+      ],
+      correct: 1,
+      explain:
+        "La parade au single thread : la perte d'un fil n'est plus la perte du compte. Le champion qui part est le churn B2B le plus évitable.",
+    },
+    {
+      id: 9,
+      prompt: "Quand engager la conversation de renouvellement enterprise ?",
+      options: [
+        "À J-30 de l'échéance",
+        "À J-180 : on construit pendant qu'il reste le temps d'agir ; à J-30 on subit",
+        "Le jour de l'échéance",
+        "Après l'échéance",
+      ],
+      correct: 1,
+      explain:
+        "Le renouvellement est un cycle de vente, pas une reconduction. À J-30, le bilan est figé et toute concession devient le prix de l'urgence.",
+    },
+    {
+      id: 10,
+      prompt: "Comment construire le dossier de renouvellement enterprise ?",
+      options: [
+        "Dans la langue du champion uniquement",
+        "Dans la langue de l'economic buyer (ROI), avec les munitions du champion (résultats des QBR)",
+        "En proposant d'abord une remise",
+        "En ignorant l'economic buyer",
+      ],
+      correct: 1,
+      explain:
+        "Le champion gagne les utilisateurs, l'economic buyer signe. L'economic buyer rencontré pour la première fois à J-60 est un risque, pas un interlocuteur.",
+    },
+  ],
+};
+
 export const QUIZZES: Record<string, Quiz> = {
   [module1.moduleSlug]: module1,
   [module2.moduleSlug]: module2,
@@ -1458,6 +1596,7 @@ export const QUIZZES: Record<string, Quiz> = {
   [module8.moduleSlug]: module8,
   [module9.moduleSlug]: module9,
   [module10.moduleSlug]: module10,
+  [module11.moduleSlug]: module11,
 };
 
 export function getQuiz(slug: string): Quiz | undefined {

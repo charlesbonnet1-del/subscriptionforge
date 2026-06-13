@@ -31,6 +31,7 @@ import MrrWaterfall from "./MrrWaterfall";
 import { WaterfallDiagnose, CacLtvQuadrant, ForecastRealism, DataToolStage } from "./DataGames";
 import NewsletterCalculator from "./NewsletterCalculator";
 import { MediaPaywallMatch, ContentFracture, CreatorTierMatch, CreatorScalability } from "./MediaGames";
+import { PlgEligibility, UsageBasedViability, SupportVsCs, ChampionVsBuyer, RenewalTimeline } from "./SaasGames";
 
 const REGISTRY: Record<string, React.ComponentType[]> = {
   "economie-de-l-abonnement": [VocabMatch, ArchetypeClassifier, FindTheError, LtvCalculator, DecisionTree],
@@ -44,6 +45,7 @@ const REGISTRY: Record<string, React.ComponentType[]> = {
   "nrr-et-expansion": [NrrCalculator, NrrState, ExpansionLever, ExpansionSegmentation, LoyaltyVsWinback],
   "maitriser-ses-donnees": [MrrWaterfall, WaterfallDiagnose, CacLtvQuadrant, ForecastRealism, DataToolStage],
   "media-newsletters-creators": [NewsletterCalculator, MediaPaywallMatch, ContentFracture, CreatorTierMatch, CreatorScalability],
+  "saas-b2b": [PlgEligibility, UsageBasedViability, SupportVsCs, ChampionVsBuyer, RenewalTimeline],
 };
 
 export function hasModuleGames(slug: string): boolean {
