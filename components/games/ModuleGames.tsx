@@ -35,6 +35,8 @@ import { PlgEligibility, UsageBasedViability, SupportVsCs, ChampionVsBuyer, Rene
 import BoxEconomics from "./BoxEconomics";
 import { AppStoreStrategy, MobilePaywallAudit, BoxRetentionLever, BoxDesign } from "./MobileBoxGames";
 import { BillingChoice, DarkPatternSpotter, LoyalVsDark, DarkPatternHarm } from "./StackGames";
+import JCurveSimulator from "./JCurveSimulator";
+import { TransitionStyle, TransitionPhase, MigrationPrinciples } from "./TransitionGames";
 
 const REGISTRY: Record<string, React.ComponentType[]> = {
   "economie-de-l-abonnement": [VocabMatch, ArchetypeClassifier, FindTheError, LtvCalculator, DecisionTree],
@@ -51,6 +53,7 @@ const REGISTRY: Record<string, React.ComponentType[]> = {
   "saas-b2b": [PlgEligibility, UsageBasedViability, SupportVsCs, ChampionVsBuyer, RenewalTimeline],
   "mobile-et-abonnements-physiques": [AppStoreStrategy, MobilePaywallAudit, BoxEconomics, BoxDesign, BoxRetentionLever],
   "stack-technique-et-outils": [BillingChoice, DarkPatternSpotter, LoyalVsDark, DarkPatternHarm],
+  "transition-vers-l-abonnement": [JCurveSimulator, TransitionStyle, TransitionPhase, MigrationPrinciples],
 };
 
 export function hasModuleGames(slug: string): boolean {

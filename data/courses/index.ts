@@ -13,6 +13,7 @@ import { moduleTen } from "./module-10";
 import { moduleEleven } from "./module-11";
 import { moduleTwelve } from "./module-12";
 import { moduleThirteen } from "./module-13";
+import { moduleFourteen } from "./module-14";
 
 // Registre des contenus de cours. Un module y figure dès que son contenu est forgé.
 export const COURSES: Record<string, CourseContent> = {
@@ -30,6 +31,7 @@ export const COURSES: Record<string, CourseContent> = {
   [moduleEleven.moduleSlug]: moduleEleven,
   [moduleTwelve.moduleSlug]: moduleTwelve,
   [moduleThirteen.moduleSlug]: moduleThirteen,
+  [moduleFourteen.moduleSlug]: moduleFourteen,
 };
 
 export function getCourse(slug: string): CourseContent | undefined {

@@ -1845,6 +1845,139 @@ const module13: Quiz = {
   ],
 };
 
+const module14: Quiz = {
+  moduleSlug: "transition-vers-l-abonnement",
+  title: "Quiz — Passer au modèle d'abonnement",
+  passMark: 14,
+  questions: [
+    {
+      id: 1,
+      prompt: "Qu'est-ce que le J-curve d'une transition vers l'abonnement ?",
+      options: [
+        "Une croissance linéaire et continue",
+        "La courbe de revenu qui plonge avant de remonter plus haut que jamais (18-36 mois)",
+        "Une chute définitive du revenu",
+        "Un pic de revenu suivi d'un déclin",
+      ],
+      correct: 1,
+      explain:
+        "Le client qui payait 1 000 € de licence paie 30 €/mois : le CA baisse pendant que la base se construit, avant de dépasser l'ancien modèle.",
+    },
+    {
+      id: 2,
+      prompt: "Le J-curve est avant tout :",
+      options: [
+        "Un risque à éviter",
+        "Un coût à financer : un projet de bilan autant que de pricing",
+        "Un problème marketing",
+        "Une erreur de modélisation",
+      ],
+      correct: 1,
+      explain:
+        "La leçon Adobe : il faut pouvoir traverser le creux sans paniquer (trésorerie, financement, ou rythme de bascule).",
+    },
+    {
+      id: 3,
+      prompt: "Pourquoi refondre la rémunération commerciale AVANT la bascule ?",
+      options: [
+        "Pour réduire les coûts",
+        "Sinon la force de vente sabote la transition en continuant de vendre l'ancien monde",
+        "Pour augmenter les marges",
+        "Parce que c'est une obligation légale",
+      ],
+      correct: 1,
+      explain:
+        "La rému assise sur le gros chèque de licence doit passer à la valeur du contrat récurrent — le chantier politique n°1.",
+    },
+    {
+      id: 4,
+      prompt: "Quel est le critère de choix entre bascule franche (Adobe) et par gravité (Microsoft) ?",
+      options: [
+        "La taille de l'entreprise",
+        "Le pouvoir de marché et la dépendance des clients (imposer vs séduire)",
+        "Le secteur d'activité",
+        "Le pays d'origine",
+      ],
+      correct: 1,
+      explain:
+        "Adobe pouvait imposer (pas d'alternative pour les créatifs) ; Microsoft, exposé au grand public, devait séduire par la coexistence inclinée.",
+    },
+    {
+      id: 5,
+      prompt: "Quel est le pire scénario d'une transition ?",
+      options: [
+        "Un J-curve trop long",
+        "Le rétropédalage à mi-creux : payer le coût sans en toucher les bénéfices",
+        "Un backlash médiatique",
+        "Une migration trop rapide",
+      ],
+      correct: 1,
+      explain:
+        "D'où la communication financière explicite du J-curve aux actionnaires (Adobe) : la condition pour ne pas se faire arrêter en plein gué.",
+    },
+    {
+      id: 6,
+      prompt: "Que fait la phase 1 (Valider avant de basculer) ?",
+      options: [
+        "Elle migre toute la base d'un coup",
+        "Elle offre l'abonnement en parallèle aux nouveaux clients et mesure, sans rien retirer",
+        "Elle supprime l'ancien modèle",
+        "Elle augmente les prix",
+      ],
+      correct: 1,
+      explain:
+        "Remplacer la conviction par une preuve : si les chiffres invalident, on a appris pour le prix d'un pilote, pas de l'entreprise.",
+    },
+    {
+      id: 7,
+      prompt: "Pourquoi un abonnement qui ne change que le mode de paiement échoue-t-il ?",
+      options: [
+        "Parce qu'il est trop cher à opérer",
+        "C'est une hausse de prix déguisée : le client fait le calcul pluriannuel, et il a raison",
+        "Parce que les stores l'interdisent",
+        "Parce qu'il augmente le churn involontaire",
+      ],
+      correct: 1,
+      explain:
+        "L'abonnement doit délivrer plus que l'ancien modèle, visiblement, dès le premier jour (cloud, mises à jour, accumulation).",
+    },
+    {
+      id: 8,
+      prompt: "Quel est le bon ordre de communication en phase 3 (Migrer la base) ?",
+      options: [
+        "Le prix avant la valeur",
+        "Le récit de valeur avant le récit de prix",
+        "Uniquement le prix",
+        "Aucune communication",
+      ],
+      correct: 1,
+      explain:
+        "La phase 2 fournit les munitions : on annonce ce que le client gagne, la modalité de paiement vient ensuite (avec segmentation par profil).",
+    },
+    {
+      id: 9,
+      prompt: "Comment honorer les clients existants lors de la migration ?",
+      options: [
+        "En ignorant leur ancienneté",
+        "Par le crédit de l'existant (remise selon la récence) et le grandfathering des migrants précoces",
+        "En augmentant leur prix en premier",
+        "En supprimant leur accès",
+      ],
+      correct: 1,
+      explain:
+        "La fidélité créditée (leçon Adobe) et le tarif de lancement garanti amorcent la pompe et fournissent les témoignages.",
+    },
+    {
+      id: 10,
+      prompt: "À quelle échéance se jugent les transitions ?",
+      options: ["3 mois", "24-36 mois", "5 ans minimum", "Immédiatement"],
+      correct: 1,
+      explain:
+        "Chaque cas (Adobe, Microsoft, NYT) a traversé son creux et ses critiques avant ses records.",
+    },
+  ],
+};
+
 export const QUIZZES: Record<string, Quiz> = {
   [module1.moduleSlug]: module1,
   [module2.moduleSlug]: module2,
@@ -1860,6 +1993,7 @@ export const QUIZZES: Record<string, Quiz> = {
   [module11.moduleSlug]: module11,
   [module12.moduleSlug]: module12,
   [module13.moduleSlug]: module13,
+  [module14.moduleSlug]: module14,
 };
 
 export function getQuiz(slug: string): Quiz | undefined {

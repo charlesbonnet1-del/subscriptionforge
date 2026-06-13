@@ -16,6 +16,7 @@ import NrrCalculator from "@/components/games/NrrCalculator";
 import MrrWaterfall from "@/components/games/MrrWaterfall";
 import NewsletterCalculator from "@/components/games/NewsletterCalculator";
 import BoxEconomics from "@/components/games/BoxEconomics";
+import JCurveSimulator from "@/components/games/JCurveSimulator";
 
 function Widget({ name }: { name: string }) {
   switch (name) {
@@ -49,6 +50,8 @@ function Widget({ name }: { name: string }) {
       return <NewsletterCalculator />;
     case "box-economics":
       return <BoxEconomics />;
+    case "jcurve-simulator":
+      return <JCurveSimulator />;
     default:
       return null;
   }

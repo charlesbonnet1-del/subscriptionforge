@@ -16,7 +16,8 @@ export type WidgetName =
   | "nrr-calculator"
   | "mrr-waterfall"
   | "newsletter-calculator"
-  | "box-economics";
+  | "box-economics"
+  | "jcurve-simulator";
 
 export type Block =
   | { type: "lead"; text: string }
