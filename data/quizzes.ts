@@ -786,6 +786,134 @@ const module6: Quiz = {
   ],
 };
 
+const module7: Quiz = {
+  moduleSlug: "strategies-de-retention",
+  title: "Quiz — Stratégies de rétention",
+  passMark: 14,
+  questions: [
+    {
+      id: 1,
+      prompt: "Quel est l'ingrédient décisif du Hook Model qui fait revenir l'utilisateur ?",
+      options: ["Le trigger externe", "La récompense variable", "L'action complexe", "La notification quotidienne"],
+      correct: 1,
+      explain:
+        "La récompense prévisible lasse ; la variable accroche (le feed qui surprend, la reco qui tombe juste). C'est la variabilité qui fait revenir « voir ».",
+    },
+    {
+      id: 2,
+      prompt: "Quel biais le « streak » de Duolingo met-il principalement en production ?",
+      options: ["La preuve sociale", "L'aversion à la perte / le sunk cost", "L'effet de leurre", "L'ancrage"],
+      correct: 1,
+      explain:
+        "Au jour 200, on apprend pour ne pas perdre 200 jours : le sunk cost rendu visible, quotidien et quantifié.",
+    },
+    {
+      id: 3,
+      prompt: "Quel est le test d'honnêteté de la gamification ?",
+      options: [
+        "Le nombre de badges proposés",
+        "Si l'on retirait toute la gamification demain, le produit retiendrait-il encore ?",
+        "Le taux d'ouverture des notifications",
+        "Le nombre d'A/B tests par trimestre",
+      ],
+      correct: 1,
+      explain:
+        "La gamification amplifie une valeur qui existe, elle ne la remplace pas. Si la réponse est non, le chantier n'est pas le jeu mais la forever promise.",
+    },
+    {
+      id: 4,
+      prompt: "Pourquoi la personnalisation est-elle un levier de rétention si puissant ?",
+      options: [
+        "Parce qu'elle réduit les coûts",
+        "Parce qu'elle s'auto-renforce : plus d'usage → meilleure connaissance → meilleur service → plus d'usage",
+        "Parce qu'elle est gratuite",
+        "Parce qu'elle remplace le support",
+      ],
+      correct: 1,
+      explain:
+        "Et plus partir coûte (tout est à réapprendre ailleurs). Sur un catalogue-commodité, l'algorithme est le moat (Spotify, Netflix).",
+    },
+    {
+      id: 5,
+      prompt: "Dans une save flow, quel doit être le PREMIER acte ?",
+      options: [
+        "Proposer un discount",
+        "Poser la question « qu'est-ce qui motive votre départ ? »",
+        "Afficher les fonctionnalités perdues",
+        "Proposer la pause",
+      ],
+      correct: 1,
+      explain:
+        "La question est le routeur de tout ce qui suit. Un discount proposé à qui part pour un bug dit « votre problème nous indiffère ».",
+    },
+    {
+      id: 6,
+      prompt: "À quoi se mesure une save flow ?",
+      options: [
+        "Au taux de déflection brut",
+        "À la rétention à 90 jours des sauvés",
+        "Au nombre d'écrans",
+        "Au montant des discounts accordés",
+      ],
+      correct: 1,
+      explain:
+        "Le sauvé par remise sans cause traitée repart en 60-90 jours (churn différé). Le taux de déflection brut ment.",
+    },
+    {
+      id: 7,
+      prompt: "Quand la pause domine-t-elle la résiliation ?",
+      options: [
+        "Toujours, quelle que soit la cause",
+        "Quand la raison est temporelle (budget du moment, usage suspendu, saison)",
+        "Quand le produit est décevant",
+        "Quand le besoin est définitivement éteint",
+      ],
+      correct: 1,
+      explain:
+        "Elle ne traite pas les causes structurelles : la proposer à un déçu est un report, pas un save. La réactivation automatique fait l'économie du dispositif.",
+    },
+    {
+      id: 8,
+      prompt: "Pourquoi un abonné downgradé est-il préférable à un abonné qui part ?",
+      options: [
+        "Parce qu'il paie plus",
+        "Parce qu'il garde ancienneté, historique, moyen de paiement et ré-upgradabilité",
+        "Parce qu'il ne se plaint jamais",
+        "Parce qu'il devient un Super-User",
+      ],
+      correct: 1,
+      explain:
+        "Un abonné à 9 € qui reste vaut infiniment plus qu'un à 19 € qui part. Le downgrade est aussi un thermomètre honnête de la valeur perçue.",
+    },
+    {
+      id: 9,
+      prompt: "Quand synchroniser la séquence de réengagement des zombies ?",
+      options: [
+        "Juste après le prélèvement annuel",
+        "À J-30/J-45 du renouvellement, jamais après",
+        "À une date fixe chaque trimestre",
+        "Uniquement quand l'abonné se plaint",
+      ],
+      correct: 1,
+      explain:
+        "Avant le renouvellement, chaque issue est bonne (réveil, ajustement, départ propre). Après le prélèvement, la même séquence devient une provocation.",
+    },
+    {
+      id: 10,
+      prompt: "Quel ton adopter dans un email de dunning (échec de paiement) ?",
+      options: [
+        "Un ton de recouvrement (« régularisez sous peine de »)",
+        "Un ton dédramatisé : l'abonné n'a rien fait de mal, lien direct en 30 secondes",
+        "Un ton menaçant pour créer l'urgence",
+        "Aucun message, couper l'accès immédiatement",
+      ],
+      correct: 1,
+      explain:
+        "La majorité des échecs sont des accidents bancaires. Le vocabulaire d'impayé insulte un client fidèle. Maintenir l'accès pendant la fenêtre : l'abonné servi règle plus volontiers.",
+    },
+  ],
+};
+
 export const QUIZZES: Record<string, Quiz> = {
   [module1.moduleSlug]: module1,
   [module2.moduleSlug]: module2,
@@ -793,6 +921,7 @@ export const QUIZZES: Record<string, Quiz> = {
   [module4.moduleSlug]: module4,
   [module5.moduleSlug]: module5,
   [module6.moduleSlug]: module6,
+  [module7.moduleSlug]: module7,
 };
 
 export function getQuiz(slug: string): Quiz | undefined {
