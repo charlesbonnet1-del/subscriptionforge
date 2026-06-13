@@ -914,6 +914,134 @@ const module7: Quiz = {
   ],
 };
 
+const module7bis: Quiz = {
+  moduleSlug: "switching-costs-lock-in",
+  title: "Quiz — Switching costs & lock-in",
+  passMark: 14,
+  questions: [
+    {
+      id: 1,
+      prompt: "Quel est le test de légitimité d'un lock-in ?",
+      options: [
+        "Le coût de sortie est-il élevé ?",
+        "L'abonné, pleinement informé, referait-il le même dépôt ?",
+        "Le concurrent peut-il le copier ?",
+        "Est-il rentable à court terme ?",
+      ],
+      correct: 1,
+      explain:
+        "Le lock-in légitime est une dépendance à de la valeur réelle (playlists, base Notion). L'illégitime est une cage artificielle que personne, informé, ne choisirait.",
+    },
+    {
+      id: 2,
+      prompt: "Pourquoi offrir l'export RENFORCE-t-il le bon lock-in ?",
+      options: [
+        "Parce que c'est une obligation légale",
+        "Parce que la confiance fait déposer davantage, et que l'essentiel ne se transporte pas",
+        "Parce que personne n'utilise jamais l'export",
+        "Parce que cela réduit les coûts de stockage",
+      ],
+      correct: 1,
+      explain:
+        "Les données brutes s'exportent, pas l'algorithme entraîné, ni les habitudes, ni la communauté. La porte ouverte sur un déménagement impossible est la forteresse parfaite et loyale.",
+    },
+    {
+      id: 3,
+      prompt: "En quoi le lock-in est-il du « pricing power en réserve » ?",
+      options: [
+        "Il permet de baisser les prix",
+        "La hausse se compare au coût de tout redéployer ailleurs, pas à zéro",
+        "Il supprime le besoin de marketing",
+        "Il garantit un NRR de 100 %",
+      ],
+      correct: 1,
+      explain:
+        "Une base verrouillée par la valeur absorbe les hausses régulières (Adobe, Salesforce) : la hausse de 10 % se compare au coût du déménagement.",
+    },
+    {
+      id: 4,
+      prompt: "Quelle est la famille de lock-in « reine du B2B » ?",
+      options: ["L'historique de données", "Les intégrations et le workflow", "La progression gamifiée", "Le format propriétaire"],
+      correct: 1,
+      explain:
+        "Chaque intégration est additionnelle et multiplicative. Partir de Slack, c'est débrancher le système nerveux de l'entreprise — un projet, pas un clic.",
+    },
+    {
+      id: 5,
+      prompt: "Pourquoi la réputation (avis, notes) est-elle un lock-in si puissant ?",
+      options: [
+        "Parce qu'elle est facile à exporter",
+        "Parce qu'elle n'a de sens que dans le système qui l'a produite et prend des années à reconstruire",
+        "Parce qu'elle est gérée par l'opérateur",
+        "Parce qu'elle est protégée par la loi",
+      ],
+      correct: 1,
+      explain:
+        "L'actif le moins portable de tous : le professionnel aux 400 avis 5 étoiles ne repart jamais de zéro. C'est le lock-in fondamental des marketplaces.",
+    },
+    {
+      id: 6,
+      prompt: "Pourquoi un modèle algorithmique entraîné est-il non portable ?",
+      options: [
+        "Parce qu'il est protégé par un brevet",
+        "On exporte la donnée, pas l'intelligence : le coût de sortie est un coût de ré-entraînement",
+        "Parce qu'il est chiffré",
+        "Parce qu'il change tous les jours",
+      ],
+      correct: 1,
+      explain:
+        "On exporte ses écoutes, pas le Discover Weekly. Chez le concurrent : la traversée du désert algorithmique (des semaines de recos médiocres).",
+    },
+    {
+      id: 7,
+      prompt: "Pourquoi la certification est-elle un lock-in unique ?",
+      options: [
+        "Elle est gratuite à produire",
+        "C'est le seul lock-in qui recrute en même temps qu'il retient",
+        "Elle empêche techniquement de partir",
+        "Elle double l'ARPU",
+      ],
+      correct: 1,
+      explain:
+        "La certification devient un actif de carrière (CV, valeur emploi). L'utilisateur certifié devient investisseur de l'écosystème : un champion fabriqué en série.",
+    },
+    {
+      id: 8,
+      prompt: "Quel est le seul lock-in dont le risque éthique marqué est l'addiction ?",
+      options: ["L'historique de données", "Les intégrations", "La progression gamifiée (streak, XP)", "Les assets créés"],
+      correct: 2,
+      explain:
+        "Le mécanisme qui retient par la peur de perdre peut capturer au-delà de l'intérêt de l'utilisateur. Garde-fou : les soupapes (gel de streak, pause qui préserve le statut).",
+    },
+    {
+      id: 9,
+      prompt: "Dans la matrice, quelle stratégie est franchement à proscrire ?",
+      options: [
+        "La courbe d'apprentissage",
+        "Le format propriétaire sans export",
+        "L'historique de données",
+        "Les certifications",
+      ],
+      correct: 1,
+      explain:
+        "La seule ligne franchement rouge : le lock-in illégitime type. Tout le reste de la matrice est éthiquement sain car fondé sur de la valeur accumulée.",
+    },
+    {
+      id: 10,
+      prompt: "Par quoi un solo founder doit-il commencer (meilleur rendement effort/puissance) ?",
+      options: [
+        "Un effet de réseau massif",
+        "L'historique visible, les assets créés, et 1-2 intégrations clés",
+        "Un écosystème bundlé de plusieurs produits",
+        "Un algorithme au niveau de Netflix",
+      ],
+      correct: 1,
+      explain:
+        "Les familles lourdes (réseau, écosystème, algo) viennent avec l'échelle. Les trois premières sont disponibles dès le premier mois du produit.",
+    },
+  ],
+};
+
 export const QUIZZES: Record<string, Quiz> = {
   [module1.moduleSlug]: module1,
   [module2.moduleSlug]: module2,
@@ -922,6 +1050,7 @@ export const QUIZZES: Record<string, Quiz> = {
   [module5.moduleSlug]: module5,
   [module6.moduleSlug]: module6,
   [module7.moduleSlug]: module7,
+  [module7bis.moduleSlug]: module7bis,
 };
 
 export function getQuiz(slug: string): Quiz | undefined {

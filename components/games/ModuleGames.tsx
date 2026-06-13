@@ -24,6 +24,7 @@ import { ChannelLtvRank, AhaDiagnose, PaywallMatch } from "./FunnelGames";
 import CohortDecay from "./CohortDecay";
 import { ChurnTaxonomy, RetentionCurveDiagnose, LeadingVsLagging, HealthScoreComponents } from "./ChurnGames";
 import { RetentionArsenal, SaveFlowRouter, GamificationFit, WinbackEligibility, DunningSequence } from "./RetentionGames";
+import { LockInLegitimacy, LockInFamily, PortabilityTest, LockInPriority, LockInEthicalRisk } from "./LockInGames";
 
 const REGISTRY: Record<string, React.ComponentType[]> = {
   "economie-de-l-abonnement": [VocabMatch, ArchetypeClassifier, FindTheError, LtvCalculator, DecisionTree],
@@ -33,6 +34,7 @@ const REGISTRY: Record<string, React.ComponentType[]> = {
   "funnel-d-abonnement": [FunnelCalculator, ChannelLtvRank, ViralKCalculator, AhaDiagnose, PaywallMatch],
   "anatomie-du-churn": [CohortDecay, ChurnTaxonomy, RetentionCurveDiagnose, LeadingVsLagging, HealthScoreComponents],
   "strategies-de-retention": [GamificationFit, SaveFlowRouter, RetentionArsenal, DunningSequence, WinbackEligibility],
+  "switching-costs-lock-in": [LockInLegitimacy, LockInFamily, PortabilityTest, LockInEthicalRisk, LockInPriority],
 };
 
 export function hasModuleGames(slug: string): boolean {
