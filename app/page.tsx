@@ -2,10 +2,12 @@ import Link from "next/link";
 import ModuleCard from "@/components/ModuleCard";
 import { modulesByPart, MODULES } from "@/data/modules";
 import { GLOSSARY } from "@/data/glossary";
+import { getCourse, COURSES } from "@/data/courses";
 
 export default function HomePage() {
   const groups = modulesByPart();
   const totalLessons = MODULES.reduce((n, m) => n + m.lessons, 0);
+  const availableCount = Object.keys(COURSES).length;
 
   return (
     <>
@@ -33,12 +35,12 @@ export default function HomePage() {
 
           <div className="hero-stats">
             <div className="hero-stat">
-              <span className="num">16</span>
-              <span className="label">Modules</span>
+              <span className="num">{availableCount}<span style={{ color: "var(--text-muted)", fontSize: "1.4rem" }}>/16</span></span>
+              <span className="label">Modules disponibles</span>
             </div>
             <div className="hero-stat">
               <span className="num">{totalLessons}</span>
-              <span className="label">Cours</span>
+              <span className="label">Cours au total</span>
             </div>
             <div className="hero-stat">
               <span className="num">20</span>
@@ -93,9 +95,18 @@ export default function HomePage() {
                 <span className="theme">{part.theme}</span>
               </div>
               <div className="modules-grid">
-                {modules.map((m) => (
-                  <ModuleCard key={m.slug} module={m} />
-                ))}
+                {modules.map((m) => {
+                  const course = getCourse(m.slug);
+                  return (
+                    <ModuleCard
+                      key={m.slug}
+                      module={m}
+                      available={Boolean(course)}
+                      lessonCount={course?.lessons.length ?? m.lessons}
+                      firstLessonSlug={course?.lessons[0].slug}
+                    />
+                  );
+                })}
               </div>
             </div>
           ))}

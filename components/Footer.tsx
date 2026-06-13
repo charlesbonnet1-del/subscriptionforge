@@ -22,6 +22,7 @@ export default function Footer() {
           <div>
             <h4>Apprendre</h4>
             <Link href="/modules">Les 16 modules</Link>
+            <Link href="/progression">Ma progression</Link>
             <Link href="/diagnostic">Diagnostic rapide</Link>
             <Link href="/glossaire">Glossaire</Link>
           </div>

@@ -22,10 +22,10 @@ export default function Header() {
             Diagnostic
           </Link>
           {ready && (
-            <span className="nav-progress hide-mobile">
-              <span className="muted">Niv. {levelFromXp(xp)}</span>
+            <Link href="/progression" className="nav-progress" aria-label="Ma progression">
+              <span className="muted hide-mobile">Niv. {levelFromXp(xp)}</span>
               <span className="nav-streak">🔥 {streak}</span>
-            </span>
+            </Link>
           )}
         </nav>
       </div>

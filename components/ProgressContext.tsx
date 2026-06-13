@@ -10,7 +10,8 @@ export type ProgressState = {
   xp: number;
   streak: number;
   lastActive: string | null; // ISO date (jour)
-  completedLessons: string[]; // ids "slug:lessonIndex"
+  completedLessons: string[]; // ids "slug:lessonSlug"
+  quizScores: Record<string, number>; // moduleSlug -> meilleure note /20
   diagnosticDone: boolean;
 };
 
@@ -19,6 +20,7 @@ const DEFAULT_STATE: ProgressState = {
   streak: 0,
   lastActive: null,
   completedLessons: [],
+  quizScores: {},
   diagnosticDone: false,
 };
 
@@ -27,6 +29,7 @@ const STORAGE_KEY = "sf_progress_v1";
 type Ctx = ProgressState & {
   addXp: (amount: number) => void;
   completeLesson: (id: string, xp?: number) => void;
+  setQuizScore: (moduleSlug: string, note: number) => void;
   markDiagnosticDone: () => void;
   ready: boolean;
 };
@@ -90,13 +93,21 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
     );
   }, []);
 
+  const setQuizScore = useCallback((moduleSlug: string, note: number) => {
+    setState((s) => {
+      const prev = s.quizScores[moduleSlug] ?? -1;
+      if (note <= prev) return s;
+      return { ...s, quizScores: { ...s.quizScores, [moduleSlug]: note } };
+    });
+  }, []);
+
   const markDiagnosticDone = useCallback(() => {
     setState((s) => (s.diagnosticDone ? s : { ...s, diagnosticDone: true, xp: s.xp + 30 }));
   }, []);
 
   return (
     <ProgressContext.Provider
-      value={{ ...state, addXp, completeLesson, markDiagnosticDone, ready }}
+      value={{ ...state, addXp, completeLesson, setQuizScore, markDiagnosticDone, ready }}
     >
       {children}
     </ProgressContext.Provider>

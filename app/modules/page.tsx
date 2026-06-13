@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ModuleCard from "@/components/ModuleCard";
 import { modulesByPart } from "@/data/modules";
+import { getCourse } from "@/data/courses";
 
 export const metadata: Metadata = {
   title: "Les 16 modules",
@@ -34,9 +35,18 @@ export default function ModulesPage() {
                 <span className="theme">{part.theme}</span>
               </div>
               <div className="modules-grid">
-                {modules.map((m) => (
-                  <ModuleCard key={m.slug} module={m} />
-                ))}
+                {modules.map((m) => {
+                  const course = getCourse(m.slug);
+                  return (
+                    <ModuleCard
+                      key={m.slug}
+                      module={m}
+                      available={Boolean(course)}
+                      lessonCount={course?.lessons.length ?? m.lessons}
+                      firstLessonSlug={course?.lessons[0].slug}
+                    />
+                  );
+                })}
               </div>
             </div>
           ))}

@@ -6,7 +6,7 @@ import type { Quiz as QuizType } from "@/data/quizzes";
 import { useProgress } from "@/components/ProgressContext";
 
 export default function Quiz({ quiz }: { quiz: QuizType }) {
-  const { addXp } = useProgress();
+  const { addXp, setQuizScore } = useProgress();
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [submitted, setSubmitted] = useState(false);
   const [awarded, setAwarded] = useState(false);
@@ -20,6 +20,7 @@ export default function Quiz({ quiz }: { quiz: QuizType }) {
   function submit() {
     setSubmitted(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
+    setQuizScore(quiz.moduleSlug, note);
     if (!awarded) {
       addXp(rawCorrect * 5 + (passed ? 30 : 0));
       setAwarded(true);
