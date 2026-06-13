@@ -961,3 +961,20 @@ a {
 .quiz-option.correct .quiz-bullet { background: var(--ok); color: #fff; }
 .quiz-option.wrong .quiz-bullet { background: var(--danger); color: #fff; }
 .quiz-explain { margin-top: 14px; padding: 14px 16px; background: var(--bg-soft); border-radius: var(--radius); font-size: 0.9rem; line-height: 1.55; color: #333; border-left: 3px solid var(--fire-core); }
+
+/* ---------- A/B copy game ---------- */
+.abcopy-block { border: 1px solid var(--border-subtle); border-radius: var(--radius); padding: 18px; background: #fff; }
+.abcopy-context { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 600; }
+.abcopy-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+.abcopy-opt {
+  text-align: left; display: flex; gap: 10px; align-items: flex-start; padding: 12px 14px;
+  border: 1px solid var(--border-subtle); border-radius: var(--radius); background: #fff; cursor: pointer;
+  font-size: 0.92rem; color: var(--text-main); transition: all 0.15s ease; line-height: 1.4;
+}
+.abcopy-opt:hover:not(:disabled) { border-color: var(--fire-core); }
+.abcopy-opt.picked { border-color: var(--fire-spark); background: #fff7f3; }
+.abcopy-opt.correct { border-color: var(--ok); background: #f3faf6; }
+.abcopy-opt.wrong { border-color: var(--danger); background: #fdf4f2; }
+.abcopy-tag { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: var(--bg-metal); font-size: 0.72rem; font-weight: 700; flex-shrink: 0; }
+.abcopy-opt.correct .abcopy-tag { background: var(--ok); color: #fff; }
+@media (max-width: 560px) { .abcopy-options { grid-template-columns: 1fr; } }

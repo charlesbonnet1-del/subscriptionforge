@@ -5,7 +5,8 @@ export type WidgetName =
   | "ltv-calculator"
   | "archetype-explorer"
   | "mrr-movement"
-  | "decision-tree";
+  | "decision-tree"
+  | "profile-explorer";
 
 export type Block =
   | { type: "lead"; text: string }

@@ -5,6 +5,7 @@ import LtvCalculator from "@/components/games/LtvCalculator";
 import ArchetypeExplorer from "@/components/games/ArchetypeExplorer";
 import MrrMovement from "@/components/games/MrrMovement";
 import DecisionTree from "@/components/games/DecisionTree";
+import ProfileExplorer from "@/components/games/ProfileExplorer";
 
 function Widget({ name }: { name: string }) {
   switch (name) {
@@ -16,6 +17,8 @@ function Widget({ name }: { name: string }) {
       return <MrrMovement />;
     case "decision-tree":
       return <DecisionTree />;
+    case "profile-explorer":
+      return <ProfileExplorer />;
     default:
       return null;
   }

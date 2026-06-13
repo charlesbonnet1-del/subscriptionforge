@@ -3,11 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getModule } from "@/data/modules";
 import { getCourse, COURSES } from "@/data/courses";
-import VocabMatch from "@/components/games/VocabMatch";
-import ArchetypeClassifier from "@/components/games/ArchetypeClassifier";
-import FindTheError from "@/components/games/FindTheError";
-import LtvCalculator from "@/components/games/LtvCalculator";
-import DecisionTree from "@/components/games/DecisionTree";
+import ModuleGames from "@/components/games/ModuleGames";
 
 export function generateStaticParams() {
   return Object.keys(COURSES)
@@ -47,20 +43,15 @@ export default async function GamesPage({
           </p>
           <h1>Mini-jeux pédagogiques</h1>
           <p>
-            Ils ne sont pas décoratifs : c'est en classant douze business, en
-            auditant un tableau de bord ou en manipulant la LTV qu'on ancre le
-            réflexe. Chaque jeu rapporte de l'XP.
+            Ils ne sont pas décoratifs : c'est en manipulant, en classant et en
+            décidant qu'on ancre le réflexe. Chaque jeu rapporte de l'XP.
           </p>
         </div>
       </section>
 
       <section className="section" style={{ paddingTop: 16 }}>
         <div className="container container-reading" style={{ display: "flex", flexDirection: "column", gap: 36 }}>
-          <VocabMatch />
-          <ArchetypeClassifier />
-          <FindTheError />
-          <LtvCalculator />
-          <DecisionTree />
+          <ModuleGames slug={slug} />
 
           <div className="text-center" style={{ marginTop: 12 }}>
             <Link href={`/modules/${slug}/quiz`} className="cta-fire-button">
