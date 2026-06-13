@@ -269,9 +269,143 @@ const module2: Quiz = {
   ],
 };
 
+const module3: Quiz = {
+  moduleSlug: "design-du-modele",
+  title: "Quiz — Design du modèle",
+  passMark: 14,
+  questions: [
+    {
+      id: 1,
+      prompt: "Qu'est-ce qu'une « forever promise » selon Baxter ?",
+      options: [
+        "La liste des fonctionnalités du produit",
+        "Le résultat continu que l'abonné achète, au service duquel le produit évolue",
+        "La garantie de remboursement à vie",
+        "Le prix bloqué pour toujours",
+      ],
+      correct: 1,
+      explain:
+        "Ce n'est ni le produit (qui change) ni la feature (qui sera copiée) : c'est le bénéfice durable. Netflix promet « toujours quelque chose de bien à regarder ».",
+    },
+    {
+      id: 2,
+      prompt: "Un générateur de CV ponctuel passe en abonnement mensuel. Conséquence la plus probable ?",
+      options: [
+        "Une LTV élevée grâce au récurrent",
+        "Un churn structurel de 15-25 % mensuel que rien ne réparera",
+        "Une conversion freemium de 8 %",
+        "Un NRR supérieur à 100 %",
+      ],
+      correct: 1,
+      explain:
+        "Confondre « utile une fois » et « indispensable en continu » est l'erreur n°1 : un problème résolu cesse de payer. Issues : à l'acte, crédits, ou étendre vers la récurrence.",
+    },
+    {
+      id: 3,
+      prompt: "Pourquoi trois plans convertissent-ils ~1,4× mieux que deux ?",
+      options: [
+        "Parce qu'ils coûtent moins cher à opérer",
+        "Parce qu'ils activent simultanément ancrage, compromis et accessibilité",
+        "Parce qu'ils réduisent le churn involontaire",
+        "Parce qu'ils suppriment le paradoxe du choix",
+      ],
+      correct: 1,
+      explain:
+        "Trois prix créent un système de comparaison interne autosuffisant. Au-delà de quatre, le paradoxe du choix s'installe (l'absence de choix).",
+    },
+    {
+      id: 4,
+      prompt: "Selon quel critère découper les fonctionnalités entre les tiers ?",
+      options: [
+        "Selon l'effort technique qu'elles ont demandé",
+        "Selon la valeur pour le client, à des frontières qui suivent ses moments de croissance",
+        "Selon leur ordre de développement",
+        "Selon le coût d'infrastructure de chacune",
+      ],
+      correct: 1,
+      explain:
+        "On facture ce qui rapporte au client, pas ce qui a été dur à coder. Le bon upgrade se déclenche quand l'usage franchit un seuil naturel (cas Notion : la collaboration).",
+    },
+    {
+      id: 5,
+      prompt: "Le freemium est avant tout une stratégie de…",
+      options: ["acquisition", "conversion", "rétention", "fidélisation"],
+      correct: 1,
+      explain:
+        "Le gratuit attire, mais c'est la conversion qui fait le business : le coût du free doit être inférieur au CAC économisé + valeur annexe. Sinon, c'est une fuite.",
+    },
+    {
+      id: 6,
+      prompt: "Pourquoi la limite d'historique à 90 jours de Slack est-elle un maître-déclencheur ?",
+      options: [
+        "Parce qu'elle est gratuite à implémenter",
+        "Parce qu'elle est indolore au début, grandit avec la dépendance et frappe au besoin maximal",
+        "Parce qu'elle bloque la collaboration",
+        "Parce qu'elle force la migration annuelle",
+      ],
+      correct: 1,
+      explain:
+        "La limite parfaite a une douleur proportionnelle à la valeur reçue : plus l'équipe utilise Slack, plus l'archive perdue vaut cher, et elle frappe pile quand « il faut retrouver ce message ».",
+    },
+    {
+      id: 7,
+      prompt: "Quelle fonctionnalité ne faut-il JAMAIS donner gratuitement ?",
+      options: [
+        "Une fonction de confort secondaire",
+        "Le hook de rétention principal",
+        "Un modèle de mise en forme de base",
+        "L'export de ses propres données",
+      ],
+      correct: 1,
+      explain:
+        "Si le hook (ce qui rend le produit indispensable) est gratuit, le payant ne vend que du confort — et le confort churne. La collaboration et la résolution profonde sont aussi à protéger.",
+    },
+    {
+      id: 8,
+      prompt: "Un trial AVEC carte bancaire, par rapport à sans carte, produit typiquement :",
+      options: [
+        "Plus de volume et une conversion de 15-25 %",
+        "Moins de volume (−20 à −40 %) et une conversion de 40-60 %",
+        "Le même volume et une meilleure rétention",
+        "Plus de volume et une conversion de 40-60 %",
+      ],
+      correct: 1,
+      explain:
+        "La carte filtre l'intention à l'entrée et automatise la conversion à la sortie (l'inaction convertit). Sans carte : volume maximal mais conversion active 15-25 %.",
+    },
+    {
+      id: 9,
+      prompt: "Pourquoi le reverse trial est-il souvent supérieur au trial classique ?",
+      options: [
+        "Il supprime le besoin d'un plan gratuit",
+        "Il mobilise l'effet de possession et ne perd personne (downgrade vers le free)",
+        "Il garantit une conversion de 100 %",
+        "Il évite toute séquence d'emails",
+      ],
+      correct: 1,
+      explain:
+        "On possède Premium puis on le perd (endowment) ; le non-converti reste en free et continue de se verrouiller. Condition : un plan free viable doit exister.",
+    },
+    {
+      id: 10,
+      prompt: "À produit égal, passer un abonné du mensuel à l'annuel :",
+      options: [
+        "Ne change pas la LTV, seulement la trésorerie",
+        "Divise le churn par 2 à 4 et multiplie la LTV par 2 à 3",
+        "Augmente le churn car l'engagement effraie",
+        "Double systématiquement l'ARPU",
+      ],
+      correct: 1,
+      explain:
+        "Une décision par an au lieu de douze, cash d'avance, churn annualisé qui tombe à 5-10 %. L'annuel est une stratégie de rétention déguisée — framing « 2 mois offerts », cibler les engagés.",
+    },
+  ],
+};
+
 export const QUIZZES: Record<string, Quiz> = {
   [module1.moduleSlug]: module1,
   [module2.moduleSlug]: module2,
+  [module3.moduleSlug]: module3,
 };
 
 export function getQuiz(slug: string): Quiz | undefined {

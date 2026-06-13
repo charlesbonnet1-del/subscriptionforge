@@ -10,10 +10,16 @@ import BiasHunt from "./BiasHunt";
 import ABCopy from "./ABCopy";
 import GuiltDetector from "./GuiltDetector";
 import LifeMomentMatch from "./LifeMomentMatch";
+import TierArchitect from "./TierArchitect";
+import FreemiumSlider from "./FreemiumSlider";
+import TrialSequence from "./TrialSequence";
+import MonthlyVsAnnual from "./MonthlyVsAnnual";
+import SeasonalCalendar from "./SeasonalCalendar";
 
 const REGISTRY: Record<string, React.ComponentType[]> = {
   "economie-de-l-abonnement": [VocabMatch, ArchetypeClassifier, FindTheError, LtvCalculator, DecisionTree],
   "psychologie-de-l-abonne": [ProfileClassifier, BiasHunt, ABCopy, GuiltDetector, LifeMomentMatch],
+  "design-du-modele": [TierArchitect, FreemiumSlider, TrialSequence, MonthlyVsAnnual, SeasonalCalendar],
 };
 
 export function hasModuleGames(slug: string): boolean {

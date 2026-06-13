@@ -6,7 +6,8 @@ export type WidgetName =
   | "archetype-explorer"
   | "mrr-movement"
   | "decision-tree"
-  | "profile-explorer";
+  | "profile-explorer"
+  | "monthly-vs-annual";
 
 export type Block =
   | { type: "lead"; text: string }

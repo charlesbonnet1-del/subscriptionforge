@@ -6,6 +6,7 @@ import ArchetypeExplorer from "@/components/games/ArchetypeExplorer";
 import MrrMovement from "@/components/games/MrrMovement";
 import DecisionTree from "@/components/games/DecisionTree";
 import ProfileExplorer from "@/components/games/ProfileExplorer";
+import MonthlyVsAnnual from "@/components/games/MonthlyVsAnnual";
 
 function Widget({ name }: { name: string }) {
   switch (name) {
@@ -19,6 +20,8 @@ function Widget({ name }: { name: string }) {
       return <DecisionTree />;
     case "profile-explorer":
       return <ProfileExplorer />;
+    case "monthly-vs-annual":
+      return <MonthlyVsAnnual />;
     default:
       return null;
   }
