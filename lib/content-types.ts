@@ -15,7 +15,8 @@ export type WidgetName =
   | "cohort-decay"
   | "nrr-calculator"
   | "mrr-waterfall"
-  | "newsletter-calculator";
+  | "newsletter-calculator"
+  | "box-economics";
 
 export type Block =
   | { type: "lead"; text: string }

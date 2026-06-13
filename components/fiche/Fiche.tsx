@@ -15,6 +15,7 @@ import CohortDecay from "@/components/games/CohortDecay";
 import NrrCalculator from "@/components/games/NrrCalculator";
 import MrrWaterfall from "@/components/games/MrrWaterfall";
 import NewsletterCalculator from "@/components/games/NewsletterCalculator";
+import BoxEconomics from "@/components/games/BoxEconomics";
 
 function Widget({ name }: { name: string }) {
   switch (name) {
@@ -46,6 +47,8 @@ function Widget({ name }: { name: string }) {
       return <MrrWaterfall />;
     case "newsletter-calculator":
       return <NewsletterCalculator />;
+    case "box-economics":
+      return <BoxEconomics />;
     default:
       return null;
   }

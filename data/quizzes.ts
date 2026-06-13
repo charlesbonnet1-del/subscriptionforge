@@ -1584,6 +1584,134 @@ const module11: Quiz = {
   ],
 };
 
+const module12: Quiz = {
+  moduleSlug: "mobile-et-abonnements-physiques",
+  title: "Quiz — Mobile & abonnements physiques",
+  passMark: 14,
+  questions: [
+    {
+      id: 1,
+      prompt: "Un abonnement mobile à 9,99 € facial rapporte réellement combien (commission incluse) ?",
+      options: ["9,99 €", "Environ 7 à 8,5 €", "5 €", "12 €"],
+      correct: 1,
+      explain:
+        "ARPU mobile réel = facial × 0,70 à 0,85 (commission 15-30 %). Tout le pricing doit être pensé net de commission.",
+    },
+    {
+      id: 2,
+      prompt: "Que prive-t-on l'opérateur en encaissant in-app plutôt que sur le web ?",
+      options: [
+        "La distribution",
+        "La relation : moyen de paiement, dunning, save flows, email sont délégués au store",
+        "La confiance",
+        "La conversion",
+      ],
+      correct: 1,
+      explain:
+        "L'abonné store est à moitié votre client : une partie de l'arsenal de rétention est déléguée au store. Le web possède la relation.",
+    },
+    {
+      id: 3,
+      prompt: "Quelle est la boussole de l'arbitrage in-app vs web ?",
+      options: [
+        "Le taux de commission seul",
+        "La LTV nette par canal de paiement (conversion × ARPU net × rétention)",
+        "Le nombre de téléchargements",
+        "La note sur le store",
+      ],
+      correct: 1,
+      explain:
+        "In-app convertit mieux mais coûte la commission et la relation ; le web encaisse tout mais se gagne à l'exécution. La LTV nette tranche.",
+    },
+    {
+      id: 4,
+      prompt: "Pourquoi le paywall mobile précoce ne contredit-il pas « après l'aha moment, jamais avant » ?",
+      options: [
+        "Parce que la règle ne s'applique pas au mobile",
+        "Parce qu'il vend un essai gratuit : l'aha moment est déplacé à l'intérieur du trial",
+        "Parce que le mobile n'a pas d'aha moment",
+        "Parce qu'il demande de payer la valeur",
+      ],
+      correct: 1,
+      explain:
+        "Le paywall ne demande pas de payer la valeur, mais d'ouvrir la période qui la démontrera. Face ID réduit la friction au minimum.",
+    },
+    {
+      id: 5,
+      prompt: "Contre quoi l'onboarding mobile se bat-il D'ABORD ?",
+      options: [
+        "Contre la conversion",
+        "Contre l'oubli (la désinstallation à un geste dans les premiers jours)",
+        "Contre la concurrence",
+        "Contre la commission",
+      ],
+      correct: 1,
+      explain:
+        "La majorité des apps installées sont abandonnées dans les premiers jours. Le TTFV cible passe sous 2-3 minutes.",
+    },
+    {
+      id: 6,
+      prompt: "Quelle est la métrique du métier des boxes physiques ?",
+      options: [
+        "Le nombre de followers",
+        "La rétention à M3 (le point mort logistique est à 3-4 cycles)",
+        "Le taux d'ouverture des emails",
+        "Le NPS",
+      ],
+      correct: 1,
+      explain:
+        "Un abonné qui churne avant M3 est une perte sèche (CAC + coûts variables des premières box). La promo d'appel agressive recrute des cohortes mortes à M2.",
+    },
+    {
+      id: 7,
+      prompt: "Pourquoi le skip (sauter un cycle) réduit-il le churn d'une box ?",
+      options: [
+        "Parce qu'il augmente le revenu du cycle",
+        "Parce que l'alternative au skip n'est presque jamais le cycle payé, c'est la résiliation",
+        "Parce qu'il supprime les coûts logistiques",
+        "Parce qu'il améliore la personnalisation",
+      ],
+      correct: 1,
+      explain:
+        "Le skip refusé ne récupère pas le revenu du cycle — il perd l'abonné. C'est la pause en version native, à budgéter (10-25 % des cycles).",
+    },
+    {
+      id: 8,
+      prompt: "Quelle est typiquement la marge brute d'une box physique ?",
+      options: ["80-90 %", "40-60 %", "95 %", "10-20 %"],
+      correct: 1,
+      explain:
+        "Contre 80-90 % en SaaS : chaque cycle a un coût variable réel (produit + packaging + transport + retours). Chaque point compte.",
+    },
+    {
+      id: 9,
+      prompt: "Qu'est-ce que la « box fatigue » ?",
+      options: [
+        "La lassitude de payer",
+        "La subscription guilt rendue visible : l'accumulation matérielle des produits non consommés",
+        "Un problème de livraison",
+        "La fatigue du créateur",
+      ],
+      correct: 1,
+      explain:
+        "L'abonné voit la pile sur l'étagère. « J'ai trop de produits » est l'une des premières raisons de résiliation, souvent devant le prix.",
+    },
+    {
+      id: 10,
+      prompt: "Exit survey « pas mes goûts » : quel levier de rétention déployer ?",
+      options: [
+        "Une remise",
+        "La personnalisation (le profil affiné devient un lock-in algorithmique)",
+        "Le dunning",
+        "Une cadence plus rapide",
+      ],
+      correct: 1,
+      explain:
+        "Plus la box est personnalisée, plus la rétention est élevée (Stitch Fix). Chaque motif d'exit survey désigne un chantier de design précis.",
+    },
+  ],
+};
+
 export const QUIZZES: Record<string, Quiz> = {
   [module1.moduleSlug]: module1,
   [module2.moduleSlug]: module2,
@@ -1597,6 +1725,7 @@ export const QUIZZES: Record<string, Quiz> = {
   [module9.moduleSlug]: module9,
   [module10.moduleSlug]: module10,
   [module11.moduleSlug]: module11,
+  [module12.moduleSlug]: module12,
 };
 
 export function getQuiz(slug: string): Quiz | undefined {

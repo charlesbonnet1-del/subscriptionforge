@@ -32,6 +32,8 @@ import { WaterfallDiagnose, CacLtvQuadrant, ForecastRealism, DataToolStage } fro
 import NewsletterCalculator from "./NewsletterCalculator";
 import { MediaPaywallMatch, ContentFracture, CreatorTierMatch, CreatorScalability } from "./MediaGames";
 import { PlgEligibility, UsageBasedViability, SupportVsCs, ChampionVsBuyer, RenewalTimeline } from "./SaasGames";
+import BoxEconomics from "./BoxEconomics";
+import { AppStoreStrategy, MobilePaywallAudit, BoxRetentionLever, BoxDesign } from "./MobileBoxGames";
 
 const REGISTRY: Record<string, React.ComponentType[]> = {
   "economie-de-l-abonnement": [VocabMatch, ArchetypeClassifier, FindTheError, LtvCalculator, DecisionTree],
@@ -46,6 +48,7 @@ const REGISTRY: Record<string, React.ComponentType[]> = {
   "maitriser-ses-donnees": [MrrWaterfall, WaterfallDiagnose, CacLtvQuadrant, ForecastRealism, DataToolStage],
   "media-newsletters-creators": [NewsletterCalculator, MediaPaywallMatch, ContentFracture, CreatorTierMatch, CreatorScalability],
   "saas-b2b": [PlgEligibility, UsageBasedViability, SupportVsCs, ChampionVsBuyer, RenewalTimeline],
+  "mobile-et-abonnements-physiques": [AppStoreStrategy, MobilePaywallAudit, BoxEconomics, BoxDesign, BoxRetentionLever],
 };
 
 export function hasModuleGames(slug: string): boolean {
