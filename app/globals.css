@@ -1043,3 +1043,15 @@ a {
 .prog-module-num { font-family: var(--font-serif); color: var(--fire-spark); font-size: 0.9rem; }
 .prog-module-title { font-family: var(--font-sans); font-weight: 600; font-size: 0.95rem; color: var(--text-main); flex: 1; }
 .prog-module-meta { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; }
+
+/* ---------- MRR Waterfall ---------- */
+.waterfall { display: flex; align-items: stretch; gap: 6px; height: 200px; padding: 12px 4px 0; background: var(--bg-soft); border-radius: var(--radius); margin-top: 8px; }
+.wf-col { flex: 1; display: flex; flex-direction: column; align-items: center; }
+.wf-track { position: relative; width: 100%; flex: 1; }
+.wf-bar { position: absolute; left: 12%; width: 76%; border-radius: 2px; }
+.wf-bar.base { background: var(--text-main); }
+.wf-bar.pos { background: linear-gradient(180deg, var(--fire-glow), var(--fire-core)); }
+.wf-bar.neg { background: var(--danger); }
+.wf-label { font-size: 0.66rem; color: var(--text-muted); margin-top: 6px; text-align: center; line-height: 1.1; }
+.wf-value { font-size: 0.62rem; color: var(--text-main); font-weight: 600; }
+@media (max-width: 600px) { .waterfall { height: 150px; } .wf-label, .wf-value { font-size: 0.55rem; } }

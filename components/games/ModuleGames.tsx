@@ -27,6 +27,8 @@ import { RetentionArsenal, SaveFlowRouter, GamificationFit, WinbackEligibility, 
 import { LockInLegitimacy, LockInFamily, PortabilityTest, LockInPriority, LockInEthicalRisk } from "./LockInGames";
 import NrrCalculator from "./NrrCalculator";
 import { NrrState, ExpansionLever, ExpansionSegmentation, LoyaltyVsWinback } from "./ExpansionGames";
+import MrrWaterfall from "./MrrWaterfall";
+import { WaterfallDiagnose, CacLtvQuadrant, ForecastRealism, DataToolStage } from "./DataGames";
 
 const REGISTRY: Record<string, React.ComponentType[]> = {
   "economie-de-l-abonnement": [VocabMatch, ArchetypeClassifier, FindTheError, LtvCalculator, DecisionTree],
@@ -38,6 +40,7 @@ const REGISTRY: Record<string, React.ComponentType[]> = {
   "strategies-de-retention": [GamificationFit, SaveFlowRouter, RetentionArsenal, DunningSequence, WinbackEligibility],
   "switching-costs-lock-in": [LockInLegitimacy, LockInFamily, PortabilityTest, LockInEthicalRisk, LockInPriority],
   "nrr-et-expansion": [NrrCalculator, NrrState, ExpansionLever, ExpansionSegmentation, LoyaltyVsWinback],
+  "maitriser-ses-donnees": [MrrWaterfall, WaterfallDiagnose, CacLtvQuadrant, ForecastRealism, DataToolStage],
 };
 
 export function hasModuleGames(slug: string): boolean {

@@ -13,7 +13,8 @@ export type WidgetName =
   | "funnel-calculator"
   | "viral-k-calculator"
   | "cohort-decay"
-  | "nrr-calculator";
+  | "nrr-calculator"
+  | "mrr-waterfall";
 
 export type Block =
   | { type: "lead"; text: string }

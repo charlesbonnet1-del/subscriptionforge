@@ -1175,6 +1175,144 @@ const module8: Quiz = {
   ],
 };
 
+const module9: Quiz = {
+  moduleSlug: "maitriser-ses-donnees",
+  title: "Quiz — Maîtriser ses données",
+  passMark: 14,
+  questions: [
+    {
+      id: 1,
+      prompt: "Pourquoi faut-il isoler la Reactivation MRR du New MRR ?",
+      options: [
+        "Pour des raisons fiscales",
+        "Parce que les mélanger masque à la fois la performance du funnel et celle du win-back/pause",
+        "Parce que la reactivation n'est pas du vrai revenu",
+        "Parce que le New est toujours plus important",
+      ],
+      correct: 1,
+      explain:
+        "Le New mesure le funnel, la Reactivation mesure le win-back et les pauses. Confondus, les deux performances disparaissent.",
+    },
+    {
+      id: 2,
+      prompt: "Que faut-il faire si l'équation de contrôle du MRR ne boucle pas au centime ?",
+      options: [
+        "L'ignorer si l'écart est petit",
+        "Régler la définition qui fuit (prorata, remise, essai) avant toute analyse",
+        "Augmenter le MRR de départ",
+        "Recalculer l'ARR",
+      ],
+      correct: 1,
+      explain:
+        "Un MRR qui ne boucle pas est un MRR qu'on ne peut pas décomposer, donc pas comprendre. La cause est toujours une définition (prorata, remise, test).",
+    },
+    {
+      id: 3,
+      prompt: "Un MRR stable composé d'un New correct annulé par une Contraction montante, c'est :",
+      options: [
+        "Une croissance saine",
+        "Le « plateau qui n'en est pas un » — un signal d'alarme invisible sans la décomposition",
+        "Un mois en trompe-l'œil positif",
+        "Une smile curve",
+      ],
+      correct: 1,
+      explain:
+        "Le prédateur silencieux ronge le revenu sans événement de résiliation. Seule la décomposition du waterfall le révèle.",
+    },
+    {
+      id: 4,
+      prompt: "Qu'est-ce que l'ARR, exactement ?",
+      options: [
+        "Les revenus des 12 derniers mois",
+        "Le MRR courant × 12 (une photographie annualisée, pas un historique)",
+        "Le total des encaissements de l'année",
+        "Le MRR moins le churn",
+      ],
+      correct: 1,
+      explain:
+        "L'ARR n'est pas un historique : c'est une photographie du MRR courant projetée sur l'année. Et ni le MRR ni l'ARR ne disent la trésorerie.",
+    },
+    {
+      id: 5,
+      prompt: "Pourquoi le CAC blended peut-il tromper ?",
+      options: [
+        "Il est trop difficile à calculer",
+        "Il moyenne des canaux sans rapport et embellit quand l'organique porte le volume",
+        "Il inclut trop de coûts",
+        "Il ignore la LTV",
+      ],
+      correct: 1,
+      explain:
+        "Un blended de 40 € peut cacher un paid à 200 € que l'organique subventionne. Le coût marginal du client poussé est celui du canal, pas la moyenne.",
+    },
+    {
+      id: 6,
+      prompt: "Quelle version de la LTV « tranche les débats » ?",
+      options: [
+        "La formule simple ARPU ÷ churn",
+        "La LTV par cohorte observée (le revenu cumulé réel des cohortes passées)",
+        "La formule actualisée",
+        "La formule à la marge",
+      ],
+      correct: 1,
+      explain:
+        "La formule projette, la cohorte constate. L'écart entre les deux (la formule surestime quand le churn précoce dépasse celui de croisière) est lui-même un diagnostic.",
+    },
+    {
+      id: 7,
+      prompt: "Dans la matrice CAC × LTV, que faire d'un segment « CAC bas, LTV faible » ?",
+      options: [
+        "L'arrêter immédiatement",
+        "Travailler la LTV (onboarding, expansion, annuel) — pas l'acquisition",
+        "Doubler le budget d'acquisition",
+        "Le migrer en annuel uniquement",
+      ],
+      correct: 1,
+      explain:
+        "C'est un « volume à transformer » : acquérir coûte peu mais rapporte peu. Le chantier est la LTV, pas l'acquisition.",
+    },
+    {
+      id: 8,
+      prompt: "Vers quel plafond converge un business à acquisition constante ?",
+      options: [
+        "MRR de départ × 2",
+        "(nouveaux abonnés × ARPU) ÷ churn",
+        "Le CAC × LTV",
+        "Il n'y a pas de plafond",
+      ],
+      correct: 1,
+      explain:
+        "À 7 % de churn, ce plafond est touché dès la 2ᵉ année — la croissance s'arrête sans qu'aucun chiffre mensuel ne se dégrade (New et churn constants, seul le solde s'éteint).",
+    },
+    {
+      id: 9,
+      prompt: "Une cohorte perd 40 % de ses abonnés mais conserve 90 % de son revenu. C'est :",
+      options: [
+        "Une alerte rouge",
+        "Le profil B2B sain (les petits partent, les gros restent et s'étendent)",
+        "Une erreur de mesure",
+        "Un churn involontaire massif",
+      ],
+      correct: 1,
+      explain:
+        "C'est pourquoi il faut produire les deux grilles (abonnés ET revenu) côte à côte : leur divergence est le diagnostic. L'inverse serait l'alerte rouge.",
+    },
+    {
+      id: 10,
+      prompt: "Quand migrer du tableur vers un outil d'analytics payant ?",
+      options: [
+        "Dès le premier mois",
+        "Quand la maintenance du classeur dépasse une heure par semaine",
+        "Jamais",
+        "Dès 100 abonnés",
+      ],
+      correct: 1,
+      explain:
+        "Pas avant. Les mois passés dans le tableur auront appris les définitions mieux qu'aucun dashboard clé en main : on ne se fait plus mentir par un chiffre qu'on a construit soi-même.",
+    },
+  ],
+};
+
 export const QUIZZES: Record<string, Quiz> = {
   [module1.moduleSlug]: module1,
   [module2.moduleSlug]: module2,
@@ -1185,6 +1323,7 @@ export const QUIZZES: Record<string, Quiz> = {
   [module7.moduleSlug]: module7,
   [module7bis.moduleSlug]: module7bis,
   [module8.moduleSlug]: module8,
+  [module9.moduleSlug]: module9,
 };
 
 export function getQuiz(slug: string): Quiz | undefined {
