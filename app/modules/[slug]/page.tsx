@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MODULES, getModule, getPart } from "@/data/modules";
+import { getCourse } from "@/data/courses";
 
 export function generateStaticParams() {
   return MODULES.map((m) => ({ slug: m.slug }));
@@ -30,9 +31,7 @@ export default async function ModuleDetailPage({
   const m = getModule(slug);
   if (!m) notFound();
   const part = getPart(m.partId);
-
-  // Le contenu détaillé des cours sera ajouté module par module.
-  const lessons = Array.from({ length: m.lessons }, (_, i) => i + 1);
+  const course = getCourse(slug);
 
   return (
     <>
@@ -56,6 +55,16 @@ export default async function ModuleDetailPage({
               <span className="badge">Mini-jeux + quiz /20</span>
               <span className="badge badge-fire">Accès ouvert</span>
             </div>
+            {course && (
+              <div className="hero-actions" style={{ marginTop: 24 }}>
+                <Link href={`/modules/${slug}/${course.lessons[0].slug}`} className="cta-fire-button">
+                  Commencer le cours 1
+                </Link>
+                <Link href={`/modules/${slug}/quiz`} className="btn-ghost">
+                  Passer directement au quiz
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -74,38 +83,65 @@ export default async function ModuleDetailPage({
 
           <div className="section-head" style={{ marginTop: 56 }}>
             <p className="eyebrow">Le contenu</p>
-            <h2>{m.lessons} cours interactifs</h2>
+            <h2>{course ? `${course.lessons.length} cours interactifs` : `${m.lessons} cours interactifs`}</h2>
             <p>
-              Fiches engageantes, éléments interactifs, vidéos, mini-jeux
-              pédagogiques et un quiz noté sur 20. Le contenu détaillé de ce
-              module est en cours de forge.
+              {course
+                ? "Fiches engageantes, éléments interactifs, mini-jeux pédagogiques et un quiz noté sur 20."
+                : "Le contenu détaillé de ce module est en cours de forge."}
             </p>
           </div>
 
-          <div className="lesson-list">
-            {lessons.map((n) => (
-              <div className="lesson-row" key={n}>
-                <span style={{ display: "flex", alignItems: "center" }}>
-                  <span className="idx">{String(n).padStart(2, "0")}</span>
-                  <span>Cours {n}</span>
-                </span>
-                <span className="badge badge-soon">Bientôt</span>
-              </div>
-            ))}
-            <div className="lesson-row" style={{ borderStyle: "dashed" }}>
-              <span style={{ display: "flex", alignItems: "center" }}>
-                <span className="idx">★</span>
-                <span>Mini-jeux + Quiz noté sur 20</span>
-              </span>
-              <span className="badge badge-soon">Bientôt</span>
+          {course ? (
+            <div className="lesson-list">
+              {course.lessons.map((l) => (
+                <Link className="lesson-row is-link" href={`/modules/${slug}/${l.slug}`} key={l.slug}>
+                  <span style={{ display: "flex", alignItems: "center" }}>
+                    <span className="idx">{l.ref}</span>
+                    <span>
+                      <strong style={{ display: "block", fontFamily: "var(--font-sans)" }}>{l.title}</strong>
+                      <span className="muted" style={{ fontSize: "0.85rem" }}>{l.subtitle}</span>
+                    </span>
+                  </span>
+                  <span className="badge badge-fire">{l.minutes} min →</span>
+                </Link>
+              ))}
+              {course.hasGames && (
+                <Link className="lesson-row is-link" href={`/modules/${slug}/jeux`} style={{ borderStyle: "dashed" }}>
+                  <span style={{ display: "flex", alignItems: "center" }}>
+                    <span className="idx">★</span>
+                    <span><strong style={{ fontFamily: "var(--font-sans)" }}>Mini-jeux pédagogiques</strong></span>
+                  </span>
+                  <span className="badge badge-fire">Jouer →</span>
+                </Link>
+              )}
+              {course.hasQuiz && (
+                <Link className="lesson-row is-link" href={`/modules/${slug}/quiz`} style={{ borderStyle: "dashed" }}>
+                  <span style={{ display: "flex", alignItems: "center" }}>
+                    <span className="idx">✓</span>
+                    <span><strong style={{ fontFamily: "var(--font-sans)" }}>Quiz noté sur 20</strong></span>
+                  </span>
+                  <span className="badge badge-fire">Évaluer →</span>
+                </Link>
+              )}
             </div>
-          </div>
-
-          <div className="callout" style={{ marginTop: 32 }}>
-            <strong>En construction.</strong> La plateforme et son socle sont en
-            place. Le contenu de ce module (cours, fiches, vidéos, mini-jeux et
-            quiz) sera publié prochainement.
-          </div>
+          ) : (
+            <>
+              <div className="lesson-list">
+                {Array.from({ length: m.lessons }, (_, i) => i + 1).map((n) => (
+                  <div className="lesson-row" key={n}>
+                    <span style={{ display: "flex", alignItems: "center" }}>
+                      <span className="idx">{String(n).padStart(2, "0")}</span>
+                      <span>Cours {n}</span>
+                    </span>
+                    <span className="badge badge-soon">Bientôt</span>
+                  </div>
+                ))}
+              </div>
+              <div className="callout" style={{ marginTop: 32 }}>
+                <strong>En construction.</strong> Le contenu de ce module (cours, fiches, vidéos, mini-jeux et quiz) sera publié prochainement.
+              </div>
+            </>
+          )}
         </div>
       </section>
     </>
