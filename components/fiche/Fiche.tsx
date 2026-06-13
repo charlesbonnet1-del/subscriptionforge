@@ -12,6 +12,7 @@ import PppCalculator from "@/components/games/PppCalculator";
 import FunnelCalculator from "@/components/games/FunnelCalculator";
 import ViralKCalculator from "@/components/games/ViralKCalculator";
 import CohortDecay from "@/components/games/CohortDecay";
+import NrrCalculator from "@/components/games/NrrCalculator";
 
 function Widget({ name }: { name: string }) {
   switch (name) {
@@ -37,6 +38,8 @@ function Widget({ name }: { name: string }) {
       return <ViralKCalculator />;
     case "cohort-decay":
       return <CohortDecay />;
+    case "nrr-calculator":
+      return <NrrCalculator />;
     default:
       return null;
   }

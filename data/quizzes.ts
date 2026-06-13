@@ -1042,6 +1042,139 @@ const module7bis: Quiz = {
   ],
 };
 
+const module8: Quiz = {
+  moduleSlug: "nrr-et-expansion",
+  title: "Quiz — NRR & expansion",
+  passMark: 14,
+  questions: [
+    {
+      id: 1,
+      prompt: "Que mesure exactement le NRR ?",
+      options: [
+        "Le revenu total de l'entreprise, nouveaux clients inclus",
+        "Ce que devient le revenu d'une cohorte de clients existants un an plus tard, sans nouveau client",
+        "Le nombre de clients perdus sur l'année",
+        "Le revenu moyen par utilisateur",
+      ],
+      correct: 1,
+      explain:
+        "On prend une cohorte à T0, on mesure son MRR, et douze mois après on remesure le MRR de ces MÊMES clients. Aucun nouveau client n'entre dans le calcul.",
+    },
+    {
+      id: 2,
+      prompt: "Une cohorte démarre à 100 000 € de MRR : +22 000 d'expansion, −6 000 de contraction, −8 000 de churn. Quel NRR ?",
+      options: ["92 %", "108 %", "116 %", "122 %"],
+      correct: 1,
+      explain:
+        "(100 000 + 22 000 − 6 000 − 8 000) / 100 000 = 108 %. Le GRR (sans expansion) serait de 86 %.",
+    },
+    {
+      id: 3,
+      prompt: "À quoi sert le GRR (Gross Revenue Retention) ?",
+      options: [
+        "À remplacer le NRR",
+        "De garde-fou : il plafonne à 100 % et révèle si un bon NRR masque une base qui fuit",
+        "À mesurer l'acquisition",
+        "À calculer le CAC",
+      ],
+      correct: 1,
+      explain:
+        "Le GRR est le NRR sans l'expansion : beaucoup d'expansion sur une base qui fuit peut flatter le NRR. Le GRR mesure la pure capacité à conserver.",
+    },
+    {
+      id: 4,
+      prompt: "Pourquoi un NRR > 100 % est-il « la croissance endogène » ?",
+      options: [
+        "Parce qu'il supprime le churn",
+        "Parce que la base croît toute seule : même à zéro acquisition, le revenu monte",
+        "Parce qu'il double l'ARPU",
+        "Parce qu'il garantit la rentabilité",
+      ],
+      correct: 1,
+      explain:
+        "110 % = +10 % de revenu annuel sans vendre à personne, qui se compose. L'acquisition devient un accélérateur, pas une perfusion.",
+    },
+    {
+      id: 5,
+      prompt: "Quel est le levier d'upsell « roi » ?",
+      options: [
+        "L'email à froid",
+        "L'upsell par trigger d'usage (l'abonné atteint une limite de son plan)",
+        "La publicité display",
+        "Le cold call",
+      ],
+      correct: 1,
+      explain:
+        "On ne vend pas un plan, on débloque une action en cours, au moment exact où la valeur du palier supérieur se démontre d'elle-même.",
+    },
+    {
+      id: 6,
+      prompt: "Pourquoi le plan familial / multi-siège est-il un levier d'expansion si puissant ?",
+      options: [
+        "Il réduit les coûts de support",
+        "On passe d'un abonnement-personne à un abonnement-groupe : l'ARPU monte ET le churn s'effondre",
+        "Il supprime le besoin d'onboarding",
+        "Il augmente le CAC",
+      ],
+      correct: 1,
+      explain:
+        "Le groupe crée un switching cost collectif (résilier le plan familial, c'est le retirer à quatre personnes). Les churns de plans groupe sont systématiquement inférieurs.",
+    },
+    {
+      id: 7,
+      prompt: "Quelle est la condition trop souvent violée du cross-sell ?",
+      options: [
+        "Le second produit doit être moins cher",
+        "Le second produit doit être bon seul",
+        "Le second produit doit être gratuit",
+        "Le second produit doit être lancé avant le premier",
+      ],
+      correct: 1,
+      explain:
+        "Le module médiocre vendu sur la force du premier érode la confiance qui portait l'ensemble.",
+    },
+    {
+      id: 8,
+      prompt: "Quelle est la distinction de doctrine entre fidélité et win-back ?",
+      options: [
+        "Aucune, ce sont des synonymes",
+        "La fidélité récompense ceux qui restent ; le win-back récompense ceux qui partent",
+        "La fidélité est gratuite, le win-back payant",
+        "La fidélité est B2B, le win-back B2C",
+      ],
+      correct: 1,
+      explain:
+        "N'offrir des avantages qu'aux churners éduque la base entière à churner pour être bien traitée. Le programme de fidélité est l'antidote structurel.",
+    },
+    {
+      id: 9,
+      prompt: "Dans quel ordre un investisseur lit-il les métriques d'un business d'abonnement ?",
+      options: [
+        "Croissance → CAC → churn → NRR",
+        "NRR → churn/GRR → LTV/CAC → croissance du MRR (en dernier)",
+        "MRR → ARR → CAC → LTV",
+        "CAC → LTV → NRR → churn",
+      ],
+      correct: 1,
+      explain:
+        "L'ordre est celui du pouvoir prédictif. La croissance se voit, mais les trois métriques précédentes disent si elle vaut quelque chose : la croissance à NRR de 80 % tourne dans le vide.",
+    },
+    {
+      id: 10,
+      prompt: "Que dit la Rule of 40 ?",
+      options: [
+        "Le churn doit rester sous 40 %",
+        "Croissance annuelle (%) + marge (%) ≥ 40",
+        "40 % de la base doit être annuelle",
+        "Le NRR doit dépasser 140 %",
+      ],
+      correct: 1,
+      explain:
+        "Croissance et rentabilité s'achètent l'une avec l'autre. L'expansion et la fidélité améliorent les deux en même temps, puisqu'elles croissent sans CAC.",
+    },
+  ],
+};
+
 export const QUIZZES: Record<string, Quiz> = {
   [module1.moduleSlug]: module1,
   [module2.moduleSlug]: module2,
@@ -1051,6 +1184,7 @@ export const QUIZZES: Record<string, Quiz> = {
   [module6.moduleSlug]: module6,
   [module7.moduleSlug]: module7,
   [module7bis.moduleSlug]: module7bis,
+  [module8.moduleSlug]: module8,
 };
 
 export function getQuiz(slug: string): Quiz | undefined {

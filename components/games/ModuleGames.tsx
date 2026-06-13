@@ -25,6 +25,8 @@ import CohortDecay from "./CohortDecay";
 import { ChurnTaxonomy, RetentionCurveDiagnose, LeadingVsLagging, HealthScoreComponents } from "./ChurnGames";
 import { RetentionArsenal, SaveFlowRouter, GamificationFit, WinbackEligibility, DunningSequence } from "./RetentionGames";
 import { LockInLegitimacy, LockInFamily, PortabilityTest, LockInPriority, LockInEthicalRisk } from "./LockInGames";
+import NrrCalculator from "./NrrCalculator";
+import { NrrState, ExpansionLever, ExpansionSegmentation, LoyaltyVsWinback } from "./ExpansionGames";
 
 const REGISTRY: Record<string, React.ComponentType[]> = {
   "economie-de-l-abonnement": [VocabMatch, ArchetypeClassifier, FindTheError, LtvCalculator, DecisionTree],
@@ -35,6 +37,7 @@ const REGISTRY: Record<string, React.ComponentType[]> = {
   "anatomie-du-churn": [CohortDecay, ChurnTaxonomy, RetentionCurveDiagnose, LeadingVsLagging, HealthScoreComponents],
   "strategies-de-retention": [GamificationFit, SaveFlowRouter, RetentionArsenal, DunningSequence, WinbackEligibility],
   "switching-costs-lock-in": [LockInLegitimacy, LockInFamily, PortabilityTest, LockInEthicalRisk, LockInPriority],
+  "nrr-et-expansion": [NrrCalculator, NrrState, ExpansionLever, ExpansionSegmentation, LoyaltyVsWinback],
 };
 
 export function hasModuleGames(slug: string): boolean {

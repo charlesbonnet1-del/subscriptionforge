@@ -12,7 +12,8 @@ export type WidgetName =
   | "ppp-calculator"
   | "funnel-calculator"
   | "viral-k-calculator"
-  | "cohort-decay";
+  | "cohort-decay"
+  | "nrr-calculator";
 
 export type Block =
   | { type: "lead"; text: string }
