@@ -1313,6 +1313,139 @@ const module9: Quiz = {
   ],
 };
 
+const module10: Quiz = {
+  moduleSlug: "media-newsletters-creators",
+  title: "Quiz — Média, newsletters & creators",
+  passMark: 14,
+  questions: [
+    {
+      id: 1,
+      prompt: "Pourquoi le modèle publicitaire des médias numériques s'est-il effondré ?",
+      options: [
+        "Les lecteurs ont disparu",
+        "Les plateformes (recherche, social) captent l'essentiel de la valeur, le média est payé en miettes",
+        "La publicité est devenue illégale",
+        "Les coûts de production ont explosé",
+      ],
+      correct: 1,
+      explain:
+        "Le média devient un fournisseur de minutes d'attention interchangeables. Le reader revenue n'est pas une option mais la stratégie de survie.",
+    },
+    {
+      id: 2,
+      prompt: "Dans l'équation du média en abonnement, dans quel ordre travaille-t-on les facteurs ?",
+      options: [
+        "Audience, puis conversion, puis rétention",
+        "Rétention d'abord, conversion ensuite, audience en dernier",
+        "ARPU d'abord, puis le reste",
+        "Tous en même temps",
+      ],
+      correct: 1,
+      explain:
+        "L'ordre inverse de l'intuition : l'audience ne vaut que convertie et retenue. C'est le seau du Module 6 d'abord.",
+    },
+    {
+      id: 3,
+      prompt: "Quel paywall maximise l'ARPU mais plafonne le volume ?",
+      options: ["Le metered", "Le hard paywall", "Le soft paywall", "Le freemium éditorial"],
+      correct: 1,
+      explain:
+        "Le hard (FT, WSJ) se défend quand le contenu est professionnellement indispensable : l'ARPU est 3-5× la presse généraliste, mais l'audience est réduite.",
+    },
+    {
+      id: 4,
+      prompt: "Pourquoi une newsletter verticale pointue convertit-elle mieux (5-10 %) qu'une généraliste (1-2 %) ?",
+      options: [
+        "Parce qu'elle est moins chère",
+        "Parce qu'on paie ce qu'on ne trouve pas ailleurs : la niche est le modèle",
+        "Parce qu'elle envoie plus d'emails",
+        "Parce qu'elle a plus d'abonnés gratuits",
+      ],
+      correct: 1,
+      explain:
+        "La spécificité est le déterminant n°1 de la conversion. La valeur professionnelle permet aussi des prix 3-10× le B2C (l'employeur rembourse).",
+    },
+    {
+      id: 5,
+      prompt: "Quel est l'actif central d'une newsletter, quelle que soit la plateforme ?",
+      options: [
+        "Le compte Substack",
+        "La liste d'emails exportable",
+        "Le nombre d'articles publiés",
+        "Le taux de commission",
+      ],
+      correct: 1,
+      explain:
+        "L'email exportable est l'actif ; la plateforme n'est que le véhicule. The Hustle a été vendu pour son audience-email.",
+    },
+    {
+      id: 6,
+      prompt: "Que dit la règle des « 1 000 vrais fans » ?",
+      options: [
+        "Il faut un million d'abonnés gratuits",
+        "Un millier de personnes prêtes à payer ~100 $/an suffit à fonder l'économie",
+        "Il faut 1 000 articles",
+        "1 000 € de budget marketing",
+      ],
+      correct: 1,
+      explain:
+        "La séquence est toujours audience gratuite → engagement → monétisation. On ouvre le payant quand l'audience demande comment soutenir.",
+    },
+    {
+      id: 7,
+      prompt: "Quel est le centre de gravité du revenu d'une grille Patreon à trois paliers ?",
+      options: [
+        "Le palier d'accès (3-5 $)",
+        "Le palier d'appartenance (8-15 $, communauté)",
+        "Le palier de proximité (25-100 $+)",
+        "Aucun, ils sont équivalents",
+      ],
+      correct: 1,
+      explain:
+        "Le palier d'appartenance (Discord, Q&A) est la contrepartie relationnelle où se concentre le revenu. L'accès fait le volume, la proximité est rare et contingentée.",
+    },
+    {
+      id: 8,
+      prompt: "Quelle est la règle d'or des contreparties creator ?",
+      options: [
+        "Du contenu exclusif inédit à chaque palier",
+        "La bonne contrepartie coûte de l'accès, pas de la production",
+        "Plus il y a de paliers, mieux c'est",
+        "Tout doit être en 1:1",
+      ],
+      correct: 1,
+      explain:
+        "Promettre du contenu exclusif par palier multiplie la charge et pousse au burnout. La contrepartie d'accès (coulisses, communauté) ne coûte pas de production additionnelle.",
+    },
+    {
+      id: 9,
+      prompt: "Quel est le test de réussite de la transition creator → produit ?",
+      options: [
+        "Le nombre d'abonnés payants",
+        "Le revenu survivrait-il à trois mois de silence du créateur ?",
+        "Le taux d'ouverture des emails",
+        "Le nombre de plateformes utilisées",
+      ],
+      correct: 1,
+      explain:
+        "Transformer ce que le créateur fait en quelque chose qui existe sans lui (catalogue, communauté, produit dérivé). Une audience-personne ne se vend pas ; un produit-média, si.",
+    },
+    {
+      id: 10,
+      prompt: "Pourquoi le bundle de contenu du NYT réduit-il le churn ?",
+      options: [
+        "Parce qu'il est moins cher",
+        "Parce que chaque produit porte une habitude indépendante : la résiliation doit toutes les vaincre",
+        "Parce qu'il supprime la publicité",
+        "Parce qu'il augmente l'ARPU uniquement",
+      ],
+      correct: 1,
+      explain:
+        "Le switching cost collectif appliqué au contenu : le jour où l'actualité lasse, le mot croisé du matin retient. Chaque brique doit porter sa propre habitude.",
+    },
+  ],
+};
+
 export const QUIZZES: Record<string, Quiz> = {
   [module1.moduleSlug]: module1,
   [module2.moduleSlug]: module2,
@@ -1324,6 +1457,7 @@ export const QUIZZES: Record<string, Quiz> = {
   [module7bis.moduleSlug]: module7bis,
   [module8.moduleSlug]: module8,
   [module9.moduleSlug]: module9,
+  [module10.moduleSlug]: module10,
 };
 
 export function getQuiz(slug: string): Quiz | undefined {

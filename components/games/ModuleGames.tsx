@@ -29,6 +29,8 @@ import NrrCalculator from "./NrrCalculator";
 import { NrrState, ExpansionLever, ExpansionSegmentation, LoyaltyVsWinback } from "./ExpansionGames";
 import MrrWaterfall from "./MrrWaterfall";
 import { WaterfallDiagnose, CacLtvQuadrant, ForecastRealism, DataToolStage } from "./DataGames";
+import NewsletterCalculator from "./NewsletterCalculator";
+import { MediaPaywallMatch, ContentFracture, CreatorTierMatch, CreatorScalability } from "./MediaGames";
 
 const REGISTRY: Record<string, React.ComponentType[]> = {
   "economie-de-l-abonnement": [VocabMatch, ArchetypeClassifier, FindTheError, LtvCalculator, DecisionTree],
@@ -41,6 +43,7 @@ const REGISTRY: Record<string, React.ComponentType[]> = {
   "switching-costs-lock-in": [LockInLegitimacy, LockInFamily, PortabilityTest, LockInEthicalRisk, LockInPriority],
   "nrr-et-expansion": [NrrCalculator, NrrState, ExpansionLever, ExpansionSegmentation, LoyaltyVsWinback],
   "maitriser-ses-donnees": [MrrWaterfall, WaterfallDiagnose, CacLtvQuadrant, ForecastRealism, DataToolStage],
+  "media-newsletters-creators": [NewsletterCalculator, MediaPaywallMatch, ContentFracture, CreatorTierMatch, CreatorScalability],
 };
 
 export function hasModuleGames(slug: string): boolean {

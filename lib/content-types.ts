@@ -14,7 +14,8 @@ export type WidgetName =
   | "viral-k-calculator"
   | "cohort-decay"
   | "nrr-calculator"
-  | "mrr-waterfall";
+  | "mrr-waterfall"
+  | "newsletter-calculator";
 
 export type Block =
   | { type: "lead"; text: string }

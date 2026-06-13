@@ -14,6 +14,7 @@ import ViralKCalculator from "@/components/games/ViralKCalculator";
 import CohortDecay from "@/components/games/CohortDecay";
 import NrrCalculator from "@/components/games/NrrCalculator";
 import MrrWaterfall from "@/components/games/MrrWaterfall";
+import NewsletterCalculator from "@/components/games/NewsletterCalculator";
 
 function Widget({ name }: { name: string }) {
   switch (name) {
@@ -43,6 +44,8 @@ function Widget({ name }: { name: string }) {
       return <NrrCalculator />;
     case "mrr-waterfall":
       return <MrrWaterfall />;
+    case "newsletter-calculator":
+      return <NewsletterCalculator />;
     default:
       return null;
   }
