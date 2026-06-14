@@ -37,6 +37,7 @@ import { AppStoreStrategy, MobilePaywallAudit, BoxRetentionLever, BoxDesign } fr
 import { BillingChoice, DarkPatternSpotter, LoyalVsDark, DarkPatternHarm } from "./StackGames";
 import JCurveSimulator from "./JCurveSimulator";
 import { TransitionStyle, TransitionPhase, MigrationPrinciples } from "./TransitionGames";
+import { SignatureMove, CaseModel, CaseLessonGame } from "./CaseStudyGames";
 
 const REGISTRY: Record<string, React.ComponentType[]> = {
   "economie-de-l-abonnement": [VocabMatch, ArchetypeClassifier, FindTheError, LtvCalculator, DecisionTree],
@@ -54,6 +55,7 @@ const REGISTRY: Record<string, React.ComponentType[]> = {
   "mobile-et-abonnements-physiques": [AppStoreStrategy, MobilePaywallAudit, BoxEconomics, BoxDesign, BoxRetentionLever],
   "stack-technique-et-outils": [BillingChoice, DarkPatternSpotter, LoyalVsDark, DarkPatternHarm],
   "transition-vers-l-abonnement": [JCurveSimulator, TransitionStyle, TransitionPhase, MigrationPrinciples],
+  "case-studies": [SignatureMove, CaseModel, CaseLessonGame],
 };
 
 export function hasModuleGames(slug: string): boolean {

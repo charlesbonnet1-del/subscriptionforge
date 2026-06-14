@@ -1978,6 +1978,144 @@ const module14: Quiz = {
   ],
 };
 
+const module15: Quiz = {
+  moduleSlug: "case-studies",
+  title: "Quiz — Les 20 case studies",
+  passMark: 14,
+  questions: [
+    {
+      id: 1,
+      prompt: "Quelle est la leçon centrale de la transition DVD → streaming de Netflix ?",
+      options: [
+        "Ne jamais changer de modèle",
+        "Se cannibaliser soi-même avant d'être cannibalisé",
+        "Maximiser les pénalités de retard",
+        "Attendre que le marché bascule",
+      ],
+      correct: 1,
+      explain:
+        "Le streaming a tué le DVD de Netflix — et c'est pour ça que Netflix a survécu. Plus l'illimité sans pénalités (le revenu par la sérénité).",
+    },
+    {
+      id: 2,
+      prompt: "Pourquoi la conversion freemium de Spotify (> 40 %) est-elle unique ?",
+      options: [
+        "Grâce à des campagnes marketing massives",
+        "Grâce à la pression structurelle du free (mobile aléatoire, pub) — le modèle convertit, pas le marketing",
+        "Parce que le premium est gratuit",
+        "Parce qu'il n'y a pas de free",
+      ],
+      correct: 1,
+      explain:
+        "Le free se calibre contre l'alternative gratuite (le piratage). La conversion vient de la pression structurelle, pas des campagnes.",
+    },
+    {
+      id: 3,
+      prompt: "Que démontre Duolingo sur le taux de conversion freemium ?",
+      options: [
+        "Qu'il est une constante du marché",
+        "Que c'est un produit du travail (de ~3 % à ~9 % par 300 tests/trimestre)",
+        "Qu'il dépend uniquement du prix",
+        "Qu'il faut dégrader le gratuit",
+      ],
+      correct: 1,
+      explain:
+        "Les grands résultats d'optimisation sont des sommes, pas un coup de génie — sans jamais dégrader le produit gratuit.",
+    },
+    {
+      id: 4,
+      prompt: "Quelle leçon Peloton illustre-t-il sur l'entreprise vs l'abonnement ?",
+      options: [
+        "Une bonne rétention garantit la santé de l'entreprise",
+        "La rétention d'abonnement et la santé de l'entreprise sont deux questions distinctes",
+        "Le hardware est toujours rentable",
+        "La communauté ne sert à rien",
+      ],
+      correct: 1,
+      explain:
+        "La meilleure rétention du marché (~1 % de churn) n'a pas suffi à sauver une économie de hardware mal pilotée (surproduction post-Covid).",
+    },
+    {
+      id: 5,
+      prompt: "Quelle est la différence entre les transitions Adobe et Microsoft ?",
+      options: [
+        "Adobe a échoué, Microsoft a réussi",
+        "Adobe = bascule franche (pouvoir d'imposer) ; Microsoft = bascule par gravité (devait séduire)",
+        "Microsoft a tué la licence du jour au lendemain",
+        "Adobe n'a pas communiqué son J-curve",
+      ],
+      correct: 1,
+      explain:
+        "Le critère de choix est le pouvoir de marché : Adobe pouvait imposer, Microsoft (exposé au grand public) devait incliner le terrain.",
+    },
+    {
+      id: 6,
+      prompt: "Quel est le chef-d'œuvre du freemium B2B de Slack ?",
+      options: [
+        "Le nombre d'intégrations",
+        "La limite d'archives : indolore au début, sa douleur croît avec la valeur reçue",
+        "Le prix bas",
+        "La publicité ciblée",
+      ],
+      correct: 1,
+      explain:
+        "Elle frappe au moment de besoin maximal (« il faut retrouver ce message »), et c'est l'entreprise qui paie, pas l'utilisateur.",
+    },
+    {
+      id: 7,
+      prompt: "Que démontre Figma sur la collaboration ?",
+      options: [
+        "Que c'est une simple fonctionnalité",
+        "Que c'est un modèle économique : chaque invité est acquisition, expansion ET lock-in",
+        "Qu'elle ralentit le produit",
+        "Qu'elle ne concerne que les designers",
+      ],
+      correct: 1,
+      explain:
+        "Le design system déposé est l'asset par excellence. Quand Adobe propose 20 Md$, c'est que le switching cost a changé de camp.",
+    },
+    {
+      id: 8,
+      prompt: "Quelle est la thèse comportementale d'Amazon Prime ?",
+      options: [
+        "La livraison rapide est rentable à l'unité",
+        "Un client qui a prépayé la livraison cesse de comparer : chaque achat ailleurs devient une perte",
+        "Le contenu vidéo est le produit principal",
+        "Les membres dépensent moins",
+      ],
+      correct: 1,
+      explain:
+        "Prime perd de l'argent sur la livraison et en gagne sur tout le reste : le membre dépense 2 à 4× le non-membre. Le P&L se lit en vision client complète.",
+    },
+    {
+      id: 9,
+      prompt: "Quelle leçon Stitch Fix donne-t-il sur le lock-in algorithmique ?",
+      options: [
+        "Il sauve n'importe quel modèle",
+        "Il vaut ce que vaut l'économie qu'il protège : un switching cost élevé sur une marge faible retient des clients qui rapportent peu",
+        "Il est impossible en physique",
+        "Il remplace la marge",
+      ],
+      correct: 1,
+      explain:
+        "La thèse ET l'antithèse du Module 7.3 en une trajectoire : la personnalisation améliore la rétention, elle ne répare pas une économie unitaire contrainte.",
+    },
+    {
+      id: 10,
+      prompt: "Que démontre LinkedIn Premium sur la disposition à payer ?",
+      options: [
+        "Qu'elle est fixe pour un produit donné",
+        "Qu'elle est une propriété du cas d'usage : le même actif vaut 30 € au particulier et 800 € à l'entreprise",
+        "Qu'il faut faire payer l'accès au réseau",
+        "Qu'un seul plan suffit",
+      ],
+      correct: 1,
+      explain:
+        "On ne vend jamais le réseau, on vend des superpouvoirs segmentés par intention (Career, Sales Navigator, Recruiter). La segmentation par intention bat celle par volume.",
+    },
+  ],
+};
+
 export const QUIZZES: Record<string, Quiz> = {
   [module1.moduleSlug]: module1,
   [module2.moduleSlug]: module2,
@@ -1994,6 +2132,7 @@ export const QUIZZES: Record<string, Quiz> = {
   [module12.moduleSlug]: module12,
   [module13.moduleSlug]: module13,
   [module14.moduleSlug]: module14,
+  [module15.moduleSlug]: module15,
 };
 
 export function getQuiz(slug: string): Quiz | undefined {
