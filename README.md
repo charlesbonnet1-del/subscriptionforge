@@ -58,8 +58,14 @@ implémenter le provider dans `lib/video.ts` (`getProvider()`).
 ## Roadmap
 
 - [x] Socle de plateforme (design, accueil, modules, glossaire, diagnostic, back office)
-- [ ] Contenu module par module : fiches, éléments interactifs, vidéos
-- [ ] Mini-jeux pédagogiques (quiz vocab, calculatrice LTV, classification…)
-- [ ] Quiz notés sur 20 par module
+- [x] **Contenu des 16 modules** : ~100 cours interactifs, fiches denses fidèles au livre
+- [x] **~75 mini-jeux pédagogiques** (calculatrices LTV/MRR/NRR/funnel/PPP/box/J-curve,
+      classifications, remises en ordre, audits…)
+- [x] **16 quiz notés sur 20** (barre à 14/20, explications détaillées)
+- [x] Page de progression gamifiée (XP, niveau, série, complétion par module)
+- [ ] Branchement d'un fournisseur vidéo (Mux/Cloudflare/Bunny) sur l'abstraction existante
 - [ ] Paywall (Supabase Auth + Stripe) — bascule du « tout ouvert » au gated
 - [ ] Comptes utilisateurs + progression persistée côté serveur
+
+> ✅ **Parcours complet** : les 16 modules de _La Bible de l'Abonnement_ sont
+> intégralement forgés en cours interactifs, mini-jeux et quiz notés.

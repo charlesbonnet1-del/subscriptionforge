@@ -2116,6 +2116,139 @@ const module15: Quiz = {
   ],
 };
 
+const module16: Quiz = {
+  moduleSlug: "40-erreurs-classiques",
+  title: "Quiz — Les 40 erreurs classiques",
+  passMark: 14,
+  questions: [
+    {
+      id: 1,
+      prompt: "Quelle est « l'erreur n°1 du métier » au lancement ?",
+      options: [
+        "Proposer trop de plans",
+        "Confondre « utile une fois » et valeur continue justifiant un abonnement",
+        "Oublier le pricing international",
+        "Lancer en août",
+      ],
+      correct: 1,
+      explain:
+        "Le besoin qui ne se régénère pas produit un churn structurel à 15-25 % que rien ne réparera. Le test de la valeur justifiée d'abord (M3.1).",
+    },
+    {
+      id: 2,
+      prompt: "Pourquoi mesurer le taux de complétion de l'onboarding est-il une erreur ?",
+      options: [
+        "Parce qu'il est difficile à calculer",
+        "Parce que 90 % de complétion peut coexister avec 100 % de churn : il mesure l'obéissance, pas la valeur",
+        "Parce qu'il varie trop",
+        "Parce qu'il n'existe pas en B2B",
+      ],
+      correct: 1,
+      explain:
+        "La bonne étoile polaire est le Time-to-First-Value (M5.5). La complétion mesure l'obéissance au parcours, pas l'activation.",
+    },
+    {
+      id: 3,
+      prompt: "Quelle est la bonne pratique de grandfathering lors d'une hausse ?",
+      options: [
+        "Toujours sans limite de durée",
+        "Le borner (« garanti 24 mois » ou « tant que l'abonnement reste actif »)",
+        "Ne jamais l'utiliser",
+        "L'appliquer aux nouveaux clients",
+      ],
+      correct: 1,
+      explain:
+        "#20 : le tarif protégé à vie crée une complexité qui s'accumule indéfiniment. Grandfatherer oui, sans borne jamais (M4.4).",
+    },
+    {
+      id: 4,
+      prompt: "Quel pourcentage du churn est typiquement involontaire (et donc à ne pas traiter comme du vrai churn) ?",
+      options: ["Moins de 5 %", "20-40 %", "50-60 %", "80 %"],
+      correct: 1,
+      explain:
+        "#23 : dont 60-70 % de soft declines récupérables. Chercher des causes produit à une panne de carte, c'est négliger le dunning (M7.10).",
+    },
+    {
+      id: 5,
+      prompt: "À quoi se mesure une save flow ?",
+      options: [
+        "Au taux de déflection brut",
+        "À la rétention à 90 jours des sauvés (sinon on confond churn différé et churn évité)",
+        "Au nombre d'écrans",
+        "Au montant des discounts",
+      ],
+      correct: 1,
+      explain:
+        "#27 : le « sauvé » par remise sans cause traitée repart en 60-90 jours. Le taux de déflection brut ment.",
+    },
+    {
+      id: 6,
+      prompt: "Pourquoi calculer le churn sur la base totale est-il une erreur d'analyse ?",
+      options: [
+        "Parce que c'est trop lent",
+        "Parce qu'en croissance, les clients récents diluent le chiffre — on découvre le problème deux ans trop tard",
+        "Parce que c'est illégal",
+        "Parce que ça surestime le churn",
+      ],
+      correct: 1,
+      explain:
+        "#31 : le churn « global » flatteur masque la fonte des cohortes anciennes. Seule la cohorte fixe est honnête (M6.3).",
+    },
+    {
+      id: 7,
+      prompt: "Pourquoi est-ce une erreur d'inclure les revenus one-shot dans le MRR ?",
+      options: [
+        "Parce que c'est interdit fiscalement",
+        "Parce qu'ils gonflent un MRR fictif — et la LTV, le payback et la valorisation avec lui",
+        "Parce qu'ils sont trop petits",
+        "Parce qu'ils sont saisonniers",
+      ],
+      correct: 1,
+      explain:
+        "#32 : si le revenu ne se représente pas contractuellement le mois prochain, il n'est pas dans le MRR (M1.4).",
+    },
+    {
+      id: 8,
+      prompt: "Quel « prédateur silencieux » ne faut-il pas ignorer en analyse ?",
+      options: [
+        "Le churn volontaire",
+        "La contraction (les downgrades qui précèdent les churns)",
+        "Le NPS",
+        "Le CAC",
+      ],
+      correct: 1,
+      explain:
+        "#35 : elle ronge le MRR sans événement à intercepter. La suivre en ligne séparée est le seul moyen de la voir (M6.1).",
+    },
+    {
+      id: 9,
+      prompt: "Quelle est l'erreur de croissance fondamentale ?",
+      options: [
+        "Investir dans le produit",
+        "Optimiser l'acquisition avant de réparer la rétention (remplir un seau percé)",
+        "Embaucher trop vite",
+        "Lancer trop de fonctionnalités",
+      ],
+      correct: 1,
+      explain:
+        "#36 : remplir un seau percé coûte de plus en plus cher à l'échelle. La rétention se répare d'abord car elle multiplie le rendement de tout le reste (M6.2).",
+    },
+    {
+      id: 10,
+      prompt: "Que faut-il impérativement pouvoir montrer à des investisseurs ?",
+      options: [
+        "La croissance brute du MRR",
+        "Le NRR (sous 100 % sans explication ni plan, le reste du deck ne sera pas lu)",
+        "Le nombre d'employés",
+        "Le budget marketing",
+      ],
+      correct: 1,
+      explain:
+        "#40 : le NRR est la première pièce du dossier — le seul chiffre qui prouve la qualité du produit avec de l'argent (M8).",
+    },
+  ],
+};
+
 export const QUIZZES: Record<string, Quiz> = {
   [module1.moduleSlug]: module1,
   [module2.moduleSlug]: module2,
@@ -2133,6 +2266,7 @@ export const QUIZZES: Record<string, Quiz> = {
   [module13.moduleSlug]: module13,
   [module14.moduleSlug]: module14,
   [module15.moduleSlug]: module15,
+  [module16.moduleSlug]: module16,
 };
 
 export function getQuiz(slug: string): Quiz | undefined {

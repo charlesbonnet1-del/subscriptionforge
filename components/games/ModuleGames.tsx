@@ -38,6 +38,7 @@ import { BillingChoice, DarkPatternSpotter, LoyalVsDark, DarkPatternHarm } from 
 import JCurveSimulator from "./JCurveSimulator";
 import { TransitionStyle, TransitionPhase, MigrationPrinciples } from "./TransitionGames";
 import { SignatureMove, CaseModel, CaseLessonGame } from "./CaseStudyGames";
+import { ErrorStage, ErrorAudit, ErrorFix } from "./ErrorGames";
 
 const REGISTRY: Record<string, React.ComponentType[]> = {
   "economie-de-l-abonnement": [VocabMatch, ArchetypeClassifier, FindTheError, LtvCalculator, DecisionTree],
@@ -56,6 +57,7 @@ const REGISTRY: Record<string, React.ComponentType[]> = {
   "stack-technique-et-outils": [BillingChoice, DarkPatternSpotter, LoyalVsDark, DarkPatternHarm],
   "transition-vers-l-abonnement": [JCurveSimulator, TransitionStyle, TransitionPhase, MigrationPrinciples],
   "case-studies": [SignatureMove, CaseModel, CaseLessonGame],
+  "40-erreurs-classiques": [ErrorStage, ErrorAudit, ErrorFix],
 };
 
 export function hasModuleGames(slug: string): boolean {
